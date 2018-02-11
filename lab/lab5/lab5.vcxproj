@@ -123,6 +123,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab5.h" />
+    <ClInclude Include="point.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
