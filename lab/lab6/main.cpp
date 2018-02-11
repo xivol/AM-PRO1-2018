@@ -1,18 +1,18 @@
 //
-// Лабораторная работа №2. Библиотека функций
+// Лабораторная работа №6. Тестирование
 // main.cpp
 //
 
 #include <iostream>
-#include "func_l2.h"
-#include "test_l2.h"
+#include "lab6.h"
+#include "test_lab5.h"
 
 using namespace std;
 
 int main()
 {
-    test_full_func_l2();
-    
+    test_full_lab5();
+
     system("pause");
     return 0;
 }

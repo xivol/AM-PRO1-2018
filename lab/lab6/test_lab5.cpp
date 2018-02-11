@@ -1,5 +1,5 @@
-//
-// Лабораторная работа №6. Тестирование
+п»ї//
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–6. РўРµСЃС‚РёСЂРѕРІР°РЅРёРµ
 // test_lab5.cpp
 //
 
@@ -12,22 +12,27 @@
 
 using namespace std;
 
-bool test_sqr(int number_of_tests)
+bool test_sqr()
 {
-    // std::cerr - стандартный поток вывода для ошибок
-    // по умолчанию выводит на консоль    
+    // std::cerr - СЃС‚Р°РЅРґР°СЂС‚РЅС‹Р№ РїРѕС‚РѕРє РІС‹РІРѕРґР° РґР»СЏ РѕС€РёР±РѕРє
+    // РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ РІС‹РІРѕРґРёС‚ РЅР° РєРѕРЅСЃРѕР»СЊ    
     cerr << "test sqr: ";
 
-    int n = 0;
-    while (n < number_of_tests) {
-        double a = rand() * (0.5 - (double)rand() / RAND_MAX);
-        double result = a*a;
-        
-        assert(abs(sqr(a) - result) < precision);
-        n += 1;
-    }
+    // РўРµСЃС‚ 1 - РЅСѓР»РµРІРѕРµ Р·РЅР°С‡РµРЅРёРµ
+    double a = 0;
+    double result = 0;
+    assert(abs(sqr(a) - result) < precision);
 
-    // Все тесты пройдены успешно
+    // РўРµСЃС‚ 2 - РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+    a = 0.5;
+    result = 0.25;
+    assert(abs(sqr(a) - result) < precision);
+
+    // РўРµСЃС‚ 3 - РѕС‚СЂРёС†Р°С‚РµР»СЊРЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
+    a = -0.5;
+    assert(abs(sqr(a) - result) < precision);
+
+    // Р’СЃРµ С‚РµСЃС‚С‹ РїСЂРѕР№РґРµРЅС‹ СѓСЃРїРµС€РЅРѕ
     cerr << "OK" << endl;
     return true;
 }
@@ -37,37 +42,34 @@ bool test_distance()
 {  
     cerr << "test distance: ";
 
-    // Тест 1 - единичный отрезок
+    // РўРµСЃС‚ 1 - РµРґРёРЅРёС‡РЅС‹Р№ РѕС‚СЂРµР·РѕРє
     double x1 = 0, y1 = 0;
     double x2 = 1, y2 = 0;
     double result = 1;
     
     assert( abs( distance(x1, y1, x2, y2) - result) < precision);
     
-    // Тест 2 - отрезок иррациональной длины
+    // РўРµСЃС‚ 2 - РѕС‚СЂРµР·РѕРє РёСЂСЂР°С†РёРѕРЅР°Р»СЊРЅРѕР№ РґР»РёРЅС‹
     x1 = 2; y1 = 5;
     x2 = 3; y2 = 4;
     result = sqrt(2);
 
     assert ( abs( distance (x1,y1,x2,y2) - result) < precision);
 
-    // Тест 3 - отрезок нулевой длины
-    // Опишите тест для отрезка нулевой длины
-    x2 = 2; y2 = 5;
-    result = 0;
-    assert ( abs( distance(x1, y1, x2, y2) - result) < precision);
+    // РўРµСЃС‚ 3 - РѕС‚СЂРµР·РѕРє РЅСѓР»РµРІРѕР№ РґР»РёРЅС‹
+    // РћРїРёС€РёС‚Рµ С‚РµСЃС‚ РґР»СЏ РѕС‚СЂРµР·РєР° РЅСѓР»РµРІРѕР№ РґР»РёРЅС‹
+    assert ( false );
   
     cerr << "OK" << endl;
     return true;
 }
 
-bool test_full_func_l2()
+bool test_full_lab5()
 {
-    // Проверка запуска в режиме отладки (макрос _DEBUG)
+    // РџСЂРѕРІРµСЂРєР° Р·Р°РїСѓСЃРєР° РІ СЂРµР¶РёРјРµ РѕС‚Р»Р°РґРєРё (РјР°РєСЂРѕСЃ _DEBUG)
 #ifdef _DEBUG
-    // Этот код будет скомпилирован только в режиме отладки
-    int number_of_tests = 100;
-    return test_sqr(number_of_tests) && test_distance();
+    // Р­С‚РѕС‚ РєРѕРґ Р±СѓРґРµС‚ СЃРєРѕРјРїРёР»РёСЂРѕРІР°РЅ С‚РѕР»СЊРєРѕ РІ СЂРµР¶РёРјРµ РѕС‚Р»Р°РґРєРё
+    return test_sqr() && test_distance();
 
 #endif /* _DEBUG */
 

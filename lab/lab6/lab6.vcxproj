@@ -124,6 +124,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="lab5.h" />
+    <ClInclude Include="lab6.h" />
     <ClInclude Include="test_lab5.h" />
   </ItemGroup>
   <ItemGroup>
