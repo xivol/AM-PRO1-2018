@@ -78,17 +78,17 @@ bool test_divide_sums_around_min(void *func)
     double a[] = { 0, 0, 7, 1, 2, 3, 5 };
     int n = 7;
     double result = 0;
-    assert(divide_sums_around_min(a, n) == result);
+    assert(abs(divide_sums_around_min(a, n) - result) < precision);
 
     a[0] = 3;
     // { 3, 0, 7, 1, 2, 3, 5 };
     result = 3.0 / 18.0;
-    assert(divide_sums_around_min(a, n) == result);
+    assert(abs(divide_sums_around_min(a, n) - result) < precision);
 
     a[4] = -3;
     // { 3, 0, 7, 1, -3, 3, 5 };
     result = 11.0 / 8.0;
-    assert(divide_sums_around_min(a, n) == result);
+    assert(abs(divide_sums_around_min(a, n) - result) < precision);
 
     a[6] = -5;
     // { 3, 0, 7, 1, -3, 3, -5 };
