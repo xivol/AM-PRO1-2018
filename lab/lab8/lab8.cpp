@@ -1,50 +1,80 @@
-#include <cmath>
+#include <cassert>
 #include <iomanip>
 #include <iostream>
 #include "lab8.h"
 
 using namespace std;
 
-void table(const simple_func funcs[], int func_size, const double points[], int points_size)
+void print_float(float * t)
 {
-	std::cout << std::fixed;     // фиксированный формат чисел с плавающей точкой
-	std::cout << std::setprecision(4);      // задание количества знаков после запятой
-
-	cout << " | " << setw(10) << "X" << " | ";
-	for (int j = 0; j < func_size; ++j) {
-		cout << setw(9) << "func" << j << " | ";
-	}
-	cout << endl;
-
-	for (int i = 0; i < points_size; ++i) 
-	{
-		double rad = points[i] / 180.0 * 3.14;
-		cout << " | " << setw(10) << rad << " | ";
-		for (int j = 0; j < func_size; ++j)
-		{
-			cout << setw(10) << funcs[j](rad) << " | ";
-		}
-		cout << endl;
-	}
+    assert(t != nullptr); // не пустой указатель
+    
+    // fixed - устанавливает формат вывода 
+    // с фиксированной точкой для всего потока
+    cout << fixed;
+    // setprecision - устанавливает количество знаков 
+    // после запятой для всего потока
+    //
+    cout << setprecision(4);
+    cout << "0x" << t << " | ";
+    cout << setw(10) << "float" << " | ";
+    cout << setw(10) << *t << " | ";
+    
+    // hex - устанавливает формат вывода 
+    // целых чисел в шестнадцатеричной форме
+    cout << setw(10) << hex << *(int*)t << endl;
 }
 
-
-void tab(double(*const f)(double), const double a, const double b, const double h)
+void print_int(int * t)
 {
-	std::cout << std::fixed << std::setprecision(6);
-	for (double x = a; x < b; x += h) {
-		std::cout << " | ";
-		std::cout << std::setw(10) << x;
-		std::cout << '|';
-		std::cout << std::setw(10) << f(x);
-		std::cout << " | ";
-		std::cout << std::endl;
-	}
+    assert(t != nullptr); // не пустой указатель
 
-	std::cout << " | ";
-	std::cout << std::setw(10) << b;
-	std::cout << '|';
-	std::cout << std::setw(10) << f(b);
-	std::cout << " | ";
-	std::cout << std::endl;
+    cout << "0x" << t << " | ";
+    cout << setw(10) << "int" << " | "; 
+
+    // dec - устанавливает формат вывода 
+    // целых чисел в десятицной форме
+    cout << setw(10) << dec << *t << " | ";
+    
+    // hex - устанавливает формат вывода 
+    // целых чисел в шестнадцатеричной форме
+    cout << setw(10) << hex << *t << endl;
+}
+
+void print_func(simple_func f, double x, uint precision)
+{
+    assert(f != nullptr);
+    cout << fixed << setprecision(precision) << defaultfloat;
+    cout << "f: 0x" << f << " | ";
+    cout << "x: " << setw(2 * precision + 1) << x << " | ";
+    cout << "f(x): " << setw(2 * precision + 1) << f(x) << endl;
+}
+
+void read(double *a, int &n)
+{
+    assert(a != nullptr);
+    cout << "Введите N<" << max_N << endl;
+    do {
+        cin >> n;
+    } while (n < 1 || n >= max_N);
+
+    cout << "Введите " << n << " элемнтов" << endl;
+    
+    double *p = a;
+    while ((p - a) < n) {
+        cin >> *p++;
+    }
+}
+
+void print(const double *a, int n)
+{
+    assert(a != nullptr);
+    assert(n>0 && n<max_N);
+
+    const double *p = a;    
+    while ((p - a) < n) {
+        cout << *p++ << " ";
+    }
+
+    cout << endl;
 }
