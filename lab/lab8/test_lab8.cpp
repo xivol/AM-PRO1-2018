@@ -1,6 +1,6 @@
 //
-// Лабораторная работа №8. Массивы и указатели
-// test_lab8.cpp
+// Лабораторная работа №8. Работа с указателями
+// test_lab8.h
 //
 #include <iostream>
 #include <cmath>
@@ -12,7 +12,7 @@ using namespace std;
 
 bool test_swap_ptr(void * func)
 {
-    cerr << "test swap: ";
+    cerr << "test swap_ptr: ";
 
     if (func == nullptr) {
         cerr << "NOT IMPLEMENTED" << endl;
@@ -80,23 +80,46 @@ bool test_root(void * func)
     return true;
 }
 
-bool test_min_distance(void * func)
+bool is_even(int x)
 {
-    cerr << "test min_distance: ";
+    return x % 2 != 0;
+}
+
+bool is_odd(int x)
+{
+    return !is_even(x);
+}
+
+bool less_5(int x)
+{
+    return x < 5;
+}
+
+bool test_all(void * func)
+{
+    cerr << "test all: ";
 
     if (func == nullptr) {
         cerr << "NOT IMPLEMENTED" << endl;
         return true;
     }
-    double(*min_distance)(const simple_func f, const double *x, const uint size, int &min_index1, int &min_index2) = (double(*)(const simple_func f, const double *x, const uint size, int &min_index1, int &min_index2)) func;
+    bool(*all)(condition f, const int *x, const uint size) = (bool (*)(condition f, const int *x, const uint size)) func;
+
+    int x[] = { 0, 1, 0 ,2, 0, 3 };
+    uint sz = 6;
+    assert(!all(is_odd, x, sz));
+
+    assert(all(is_even, x, sz));
+
+    assert(all(less_5, x, sz));
 
     cerr << "OK" << endl;
     return true;
 }
 
-bool test_full_func_lab8()
+bool test_full_lab8()
 {
-    return test_swap_ptr(/*...*/) &&
-        test_root(/*...*/) &&
-        test_min_distance(/*...*/);
+    return test_swap_ptr( /*...*/ ) &&
+        test_root( /*...*/ ) &&
+        test_all( /*...*/ );
 }

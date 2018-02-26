@@ -1,3 +1,7 @@
+//
+// Лабораторная работа №8. Работа с указателями
+// lab8.cpp
+//
 #include <cassert>
 #include <iomanip>
 #include <iostream>
@@ -50,7 +54,7 @@ void print_func(simple_func f, double x, uint precision)
     cout << "f(x): " << setw(2 * precision + 1) << f(x) << endl;
 }
 
-void read(double *a, int &n)
+void read(int *a, int &n)
 {
     assert(a != nullptr);
     cout << "Введите N<" << max_N << endl;
@@ -60,18 +64,18 @@ void read(double *a, int &n)
 
     cout << "Введите " << n << " элемнтов" << endl;
     
-    double *p = a;
+    int *p = a;
     while ((p - a) < n) {
         cin >> *p++;
     }
 }
 
-void print(const double *a, int n)
+void print(const int *a, int n)
 {
     assert(a != nullptr);
     assert(n>0 && n<max_N);
 
-    const double *p = a;    
+    const int *p = a;    
     while ((p - a) < n) {
         cout << *p++ << " ";
     }

@@ -1,5 +1,5 @@
 ﻿//
-// Лабораторная работа №8. Массивы и указатели
+// Лабораторная работа №8. Работа с указателями
 // main.cpp
 //
 
@@ -18,7 +18,7 @@ double cotan(double x)
 
 int main() 
 {
-    test_full_func_lab8();
+    test_full_lab8();
     setlocale(LC_ALL, "Russian");
     system("chcp 1251");
     
@@ -42,14 +42,13 @@ int main()
     // print_float(&k); 
     // print_int(&a);
     
-    cout << setw(10) << "type cast:" << endl;
     // Явное преобразование допустимо
+    cout << setw(10) << "type cast:" << endl;
     print_float((float*)&k);
     print_int((int*)&a);
 
-    void *p = nullptr;
     // Неявно можно преобразовывать к нетипизированному указателю
-    p = &k;
+    void *p = &k;
     // Но к конкретному типу придется приводить явно
     print_float((float*)p);
     print_int((int*)p);
@@ -57,8 +56,8 @@ int main()
     // Нетипизированный указатель позволяет 
     // писать обощенные функции работы с памятью
     
-    // Реализуйте swap!
-    //swap(&a, &k, sizeof(int));
+    // Реализуйте swap_ptr!
+    //swap_ptr(&a, &k, sizeof(int));
     
     //cout << setw(10) << "swapped:" << endl;
     //print_float(&a);
@@ -73,7 +72,7 @@ int main()
     cout << setw(46) << ">" << endl;
     cout << setfill(' ');
 
-    // Выведем таблицу значений функций в точке
+    // Выведем таблицу значений для нескольких функций в точке
     const simple_func f[] = { sin, cos, tan, cotan };
 
     // Размер статического массива можно узнать 
