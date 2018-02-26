@@ -109,7 +109,7 @@ bool test_all(void * func)
     uint sz = 6;
     assert(!all(is_odd, x, sz));
 
-    assert(all(is_even, x, sz));
+    assert(!all(is_even, x, sz));
 
     assert(all(less_5, x, sz));
 
