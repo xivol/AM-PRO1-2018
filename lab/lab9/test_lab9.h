@@ -3,23 +3,37 @@
 // test_lab9.h
 // 
 #pragma once
-
+#include <initializer_list>
 #include "lab9.h"
 
-// bool test_name_sort_int( sort_int sort, char* sort_name )
-// Функция тестирования функций сортировки
+// Тестирование функции сортировки массива целых чисел
 // Параметры:
-//     sort — указатель на функцию;
+//     sort — указатель на функцию,
 //     sort_name — имя тестируемой функции.
+bool test_name_sort_int(char *sort_name, sort_int sort = nullptr);
+
+// Тестирование функции поиска в отсортированном массиве целых чисел
+// Параметры:
+//     find — указатель на функцию,
+//     find_name — имя тестируемой функции.
+bool test_name_find_int(char *find_name, find_int find = nullptr);
+
+// Функция генерации динамического массива с заданными значениями
+// Параметры:
+//     find — указатель на функцию,
+//     find_name — имя тестируемой функции.
 // Результат:
 //     true, если все тесты завершились удачно.
-bool test_name_sort_int( sort_int sort, char* sort_name );
+int *test_array(std::initializer_list<int> list, uint &size);
 
+// Тесты функциии:
+// void middle_insert(int value, int *&a, uint &size)
+// Проверка случаев массива чётной и нечётной длины.
+bool test_middle_insert(void *func = nullptr);
 
-// Немного магии препроцессора и можно вызвать 
-// функцию тестирования без указания имени тестируемой функции
-#define test_sort_int(sort) test_name_sort_int(sort, #sort)
-/*          ^               ^
-     макрос с параметром    вызов функции со вторым параметром: строкой, 
-                            содержащей имя параметра макроса
-*/
+// Тесты функциии:
+// void remove_duplicates(int *&a, uint &size)
+// Проверка случаев наличия и отсутствия дубликатов.
+bool test_remove_duplicates(void *func = nullptr);
+
+bool test_full_lab9();

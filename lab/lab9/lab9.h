@@ -11,13 +11,13 @@ typedef unsigned int uint;
 // Параметры:
 //     a – указатель на массив, который будет создан,
 //     n – размер введенного массива.
-void read(int *&a, int &n);
+void read(int *&a, uint &n);
 
 // Вывод массива на консоль
 // Параметры:
 //     a – массив,
 //     n – размер массива.
-void print(const int *a, int n);
+void print(const int *a, uint n);
 
 // Рекурсивная функция сортировки массива алгоритмом быстрой сортировкаи
 // Параметры:
@@ -33,7 +33,6 @@ void qsort(int *first, int *last);
 //     void qsort(int *first, int *last);
 void qsort(int *a, const uint size);
 
-
 // Указатель на функцию сортировки
 typedef void(*const sort_int)(int *, const uint);
 
@@ -46,6 +45,18 @@ typedef void(*const sort_int)(int *, const uint);
 //     время работы функции в секундах.
 double sort_time_in_seconds(sort_int sort, int* a, const uint n);
 
+// Функция поиска значения в неупорядоченном массиве 
+// Параметры:
+//     value – искомое значение,
+//     a — массив для поиска,
+//     size — длна массива a.
+// Возращаемое значение:
+//     индекс элемента с искомым значением,
+//     -1, если значение в массиве не найдено.
+int find(int value, const int *a, const uint size);
+
+
+
 // Функция генерации массива случайных целых чисел заданной длины
 // Выделяет динамическую память!
 // Параметры:
@@ -54,7 +65,7 @@ double sort_time_in_seconds(sort_int sort, int* a, const uint n);
 //     массив в динамической памяти заполненный значениями std::rand()
 int *random_array(const uint size);
 
-// Рекурсивный поиск в упорядоченной последовательности алгоритмом двоичного поиска
+// Рекурсивный поиск в упорядоченном массиве алгоритмом двоичного поиска
 // Параметры:
 //     value – искомое значение,
 //     first — указатель на первый элемент,
@@ -64,7 +75,7 @@ int *random_array(const uint size);
 //     nullptr, если значение в массиве не найдено.
 const int *find_bin(int value, const int *first, const int *last);
 
-// Поиск значения в упорядоченной последовательности алгоритмом двоичного поиска
+// Поиск значения в упорядоченном массиве алгоритмом двоичного поиска
 // Параметры:
 //     value – искомое значение,
 //     a — упорядоченный массив,
@@ -76,18 +87,8 @@ const int *find_bin(int value, const int *first, const int *last);
 //     const int *find_bin(int value, const int *first, const int *last)
 int find_bin(int value, const int *a, const uint size);
 
-// Функция поиска значения в массиве
-// Параметры:
-//     value – искомое значение,
-//     a — массив для поиска,
-//     size — длна массива a.
-// Возращаемое значение:
-//     индекс элемента с искомым значением,
-//     -1, если значение в массиве не найдено.
-int find(int value, const int *a, const uint size);
-
 // Указатель на функцию поиска
-typedef int(*const find_int)(int, int *, const uint);
+typedef int(*const find_int)(int, const int *, const uint);
 
 // Функция вычисления времени работы функции сортировки
 // Параметры:
@@ -96,4 +97,25 @@ typedef int(*const find_int)(int, int *, const uint);
 //     n — длна массива.
 // Возращаемое значение:
 //     время работы функции в секундах.
-double find_time_in_seconds(find_int find, int value, int* a, const uint n);
+double find_time_in_seconds(find_int find, int value, const int* a, const uint n);
+
+// Функция вставки значения в центр динамического масива
+// Выделяет динамическую память!
+// Параметры:
+//     value – вставляемое значение,
+//     a — массив для вставки,
+//     size — длна массива a.
+// Результат:
+//     массив с новым значением в центре,
+//     size - размер нового массива.
+void middle_insert(int value, int *&a, uint &size);
+
+// Функция удаления подряд идущих дубликатов в массиве
+// Выделяет динамическую память!
+// Параметры:
+//     a — массив,
+//     size — длна массива a.
+// Результат:
+//     массив с удаленными значениями,
+//     size - размер нового массива.
+void remove_duplicates(int *&a, uint &size);

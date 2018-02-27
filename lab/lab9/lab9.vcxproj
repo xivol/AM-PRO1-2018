@@ -19,7 +19,6 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="dynarr.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="solutions.cpp" />
     <ClCompile Include="lab9.cpp" />
@@ -27,9 +26,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crtdynmem.h" />
-    <ClInclude Include="dynarr.h" />
     <ClInclude Include="lab9.h" />
-    <ClInclude Include="sort_time.h" />
     <ClInclude Include="test_lab9.h" />
   </ItemGroup>
   <ItemGroup>
