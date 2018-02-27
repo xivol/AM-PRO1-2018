@@ -48,6 +48,6 @@ void qsort(int *a, const size_t n);
 //     n — длна массива a.
 // Возращаемое значение:
 // время работы функции в секундах.
-double sort_time_in_seconds_for( sort_int sort, int* a, const size_t n);
+double sort_time_in_seconds( sort_int sort, int* a, const size_t n);
 
 #endif /* sort_h */

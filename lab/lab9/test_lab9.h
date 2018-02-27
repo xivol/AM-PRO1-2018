@@ -1,14 +1,10 @@
 //
-// Лабораторная №5. Сортировкии, рекурсия в массивах.
-// test_sort.h
+// Лабораторная №9. Динамические массивы, замер времени выполнения.
+// test_lab9.h
 // 
-// Описание тестов для sort_time.h
-
-#ifndef test_sort_h
-#define test_sort_h
 #pragma once
 
-#include "sort_time.h"
+#include "lab9.h"
 
 // bool test_name_sort_int( sort_int sort, char* sort_name )
 // Функция тестирования функций сортировки
@@ -27,5 +23,3 @@ bool test_name_sort_int( sort_int sort, char* sort_name );
      макрос с параметром    вызов функции со вторым параметром: строкой, 
                             содержащей имя параметра макроса
 */
-
-#endif /* test_sort_h */
