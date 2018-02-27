@@ -112,16 +112,11 @@
   <ItemGroup>
     <ClCompile Include="lab8.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="solutions.cpp" />
-    <ClCompile Include="sort_time.cpp" />
-    <ClCompile Include="test_sort.cpp" />
+    <ClCompile Include="test_lab8.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="func_l3.h" />
     <ClInclude Include="lab8.h" />
-    <ClInclude Include="sort_time.h" />
-    <ClInclude Include="test_l3.h" />
-    <ClInclude Include="test_sort.h" />
+    <ClInclude Include="test_lab8.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

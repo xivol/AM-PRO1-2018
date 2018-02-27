@@ -4,6 +4,9 @@
 //
 #pragma once
 
+// Точность сравнения вещественных чисел
+const double precision = 1E-10;
+
 // Пример объявления функционального типа
 typedef int(*int_array_func)(const int a[], int n);
 

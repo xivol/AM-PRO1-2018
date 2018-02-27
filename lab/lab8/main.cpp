@@ -1,27 +1,93 @@
-//
-// Лабораторная №5. Сортировкии, рекурсия в массивах.
+﻿//
+// Лабораторная работа №8. Работа с указателями
 // main.cpp
 //
-// Замер времени выполнения функции быстрой сортировки.
 
 #include <iomanip>
 #include <iostream>
+#include "test_lab8.h"
 #include "lab8.h"
 
-double cotan(double x) {
-	return 1 / tan(x);
+using namespace std;
+
+// Котангенс ctg(x)
+double cotan(double x)
+{
+    return 1 / tan(x);
 }
 
 int main() 
 {
-   
+    test_full_lab8();
+    setlocale(LC_ALL, "Russian");
+    system("chcp 1251");
+    
+    float a;
+    int k;
+    cout << "Введите вещественное число:" << endl;
+    cin >> a;
+    k = a;
 
-	simple_func f[] = { sin, cos, tan, cotan };
-	double x[] = {0,30,60,90,120,150,180,210,240,270,300,330,360};
-	table(f, sizeof(f) / sizeof(*f), x, sizeof(x) / sizeof(*x));
+    // setw устанавливает ширину поля вывода 
+    // для последующего значения
+    cout << setw(10) << "address" << " | ";
+    cout << setw(10) << "type" << " | ";
+    cout << setw(10) << "dec" << " | ";
+    cout << setw(10) << "hex" << endl;
 
-	tab(sin, 0.0, 3.1415, 0.1);
-		
+    print_float(&a);
+    print_int(&k);
+
+    // Типизированные указатели нельзя преобразовывать неявно
+    // print_float(&k); 
+    // print_int(&a);
+    
+    // Явное преобразование допустимо
+    cout << setw(10) << "type cast:" << endl;
+    print_float((float*)&k);
+    print_int((int*)&a);
+
+    // Неявно можно преобразовывать к нетипизированному указателю
+    void *p = &k;
+    // Но к конкретному типу придется приводить явно
+    print_float((float*)p);
+    print_int((int*)p);
+
+    // Нетипизированный указатель позволяет 
+    // писать обощенные функции работы с памятью
+    
+    // Реализуйте swap_ptr!
+    //swap_ptr(&a, &k, sizeof(int));
+    
+    //cout << setw(10) << "swapped:" << endl;
+    //print_float(&a);
+    //print_int(&k);
+
+    cout << endl;
+
+    // setfill - устанавливает символ 
+    // для заполнения пустого места в поле вывода,
+    // работает для всего потока!
+    cout << setfill('>');
+    cout << setw(46) << ">" << endl;
+    cout << setfill(' ');
+
+    // Выведем таблицу значений для нескольких функций в точке
+    const simple_func f[] = { sin, cos, tan, cotan };
+
+    // Размер статического массива можно узнать 
+    // по длине выделенной памяти
+    int len = sizeof(f) / sizeof(*f);
+    
+    double x = 1.68;
+    int precision = 4;
+
+    for (int i = 0; i < len; ++i)
+        print_func(f[i], x, precision);
+
+    cout << setfill('>');
+    cout << setw(46) << ">" << endl;
+    cout << setfill(' ');
 
     system("pause");
     return 0;
