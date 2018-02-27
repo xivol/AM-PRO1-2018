@@ -3,6 +3,8 @@
 
 *.VC.db
 *.zip
+*.VC.db
+*.VC.opendb
 
 # User-specific files
 *.suo

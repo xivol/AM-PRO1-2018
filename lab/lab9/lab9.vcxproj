@@ -19,13 +19,18 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="main.cpp" />
     <ClCompile Include="solutions.cpp" />
-    <ClCompile Include="sort_time.cpp" />
-    <ClCompile Include="test_sort.cpp" />
+    <ClCompile Include="lab9.cpp" />
+    <ClCompile Include="test_lab9.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="sort_time.h" />
-    <ClInclude Include="test_sort.h" />
+    <ClInclude Include="crtdynmem.h" />
+    <ClInclude Include="lab9.h" />
+    <ClInclude Include="test_lab9.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="README.md" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <ProjectGuid>{55798549-586B-408C-B525-3A680F80AC15}</ProjectGuid>

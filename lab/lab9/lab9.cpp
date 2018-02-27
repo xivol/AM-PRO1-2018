@@ -1,15 +1,41 @@
-//
-// Лабораторная №5. Сортировкии, рекурсия в массивах.
-// sort_time.cpp
+﻿//
+// Лабораторная №9. Динамические массивы, замер времени выполнения.
+// lab9.cpp
 //
 
 #include <ctime>  // библиотека для работы со временем
+#include <cassert>
 #include <iostream>
-#include "sort_time.h"
+#include "lab9.h"
 
-// Рекурсивная функция быстрой сортировки:
-// first - указатель на первый элемент массива,
-// last  - указатель на последний элемент массива.
+using namespace std;
+
+void read(int *&a, uint &n)
+{
+	assert(a == nullptr);
+	cout << "Введите количество элементов: ";
+	cin >> n;
+	
+	a = new int[n];
+	cout << "Введите " << n << " элементов" << endl;
+	int *p = a;
+	while ((p - a) < n) {
+		cin >> *p++;
+	}
+}
+
+void print(const int *a, uint n)
+{
+	assert(a != nullptr);
+
+	const int *p = a;
+	while ((p - a) < n) {
+		cout << *p++ << " ";
+	}
+
+	cout << endl;
+}
+
 void qsort(int *first, int *last)
 { 
     if( first >= last ) return;
@@ -22,7 +48,7 @@ void qsort(int *first, int *last)
         while( *right > *mid ) right--;
 
         if( left <= right ){
-            swap_ptr( left, right );
+            swap( *left, *right );
             left++;
             right--;   
         }
@@ -34,17 +60,13 @@ void qsort(int *first, int *last)
 
 }
 
-// Функция сортировки массива
-// алгоритмом быстрой сортировки
-void qsort(int *a, const size_t n)
+void qsort(int *a, const uint n)
 { 
     qsort(a, a + n-1);  // вызов рекурсивной функции
 }
 
-// Функция замера времени средствами ctime
-double sort_time_in_seconds_for( sort_int sort, int* a, const size_t n)
+double sort_time_in_seconds( sort_int sort, int* a, const uint n)
 {
-
     // начало отсчета времени
     clock_t start = clock();
     
@@ -58,4 +80,12 @@ double sort_time_in_seconds_for( sort_int sort, int* a, const size_t n)
     double seconds = double(stop - start) / CLOCKS_PER_SEC ;
     
     return seconds;
+}
+
+int find(int value, const int * a, const uint size)
+{
+	int index = -1;
+	for (int i = 0; i < size; ++i)
+		if (a[i] == value) index = i;
+	return index;
 }
