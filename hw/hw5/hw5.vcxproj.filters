@@ -19,4 +19,9 @@
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="README.md">
+      <Filter>Файлы ресурсов</Filter>
+    </Text>
+  </ItemGroup>
 </Project>
