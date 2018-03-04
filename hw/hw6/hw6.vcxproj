@@ -118,6 +118,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="crtdynmem.h" />
+    <ClInclude Include="hw6.h" />
+    <ClInclude Include="test_hw6.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="hw6.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="test_hw6.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
