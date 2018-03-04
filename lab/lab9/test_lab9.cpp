@@ -164,10 +164,13 @@ bool test_remove_duplicates(void *func)
 	return true;
 }
 
-bool test_full_lab9() {
+bool test_full_lab9() 
+{
+#ifdef _DEBUG
 	return test_name_sort_int("qsort", qsort) &&
 		test_name_find_int("find", find) &&
 		test_name_find_int("find_bin" /* ваша реализация здесь */) &&
 		test_middle_insert(/* ваша реализация здесь */) &&
 		test_remove_duplicates(/* ваша реализация здесь */);
+#endif
 }

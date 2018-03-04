@@ -62,7 +62,7 @@ void read(int *a, int &n)
         cin >> n;
     } while (n < 1 || n >= max_N);
 
-    cout << "Введите " << n << " элемнтов" << endl;
+    cout << "Введите " << n << " элементов" << endl;
     
     int *p = a;
     while ((p - a) < n) {

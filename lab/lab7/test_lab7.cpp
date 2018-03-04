@@ -199,11 +199,12 @@ bool test_is_symmetrical(void *func)
 
 bool test_full_lab7()
 {
+#ifdef _DEBUG
     return test_first_zero(first_zero) &&
         test_product_positive_after_zero(product_positive_after_zero) &&
         test_divide_sums_around_min(/* ваша реализация здесь */) &&
         test_remove_duplicates(/* ваша реализация здесь */) &&
         test_insert_duplicates(/* ваша реализация здесь */) && 
         test_is_symmetrical(/* ваша реализация здесь */);
-
+#endif
 }

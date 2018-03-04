@@ -119,7 +119,9 @@ bool test_all(void * func)
 
 bool test_full_lab8()
 {
+#ifdef _DEBUG
     return test_swap_ptr( /* ваша реализация здесь */ ) &&
         test_root( /* ваша реализация здесь */ ) &&
         test_all(/* ваша реализация здесь */);
+#endif
 }

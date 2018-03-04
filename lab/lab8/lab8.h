@@ -7,7 +7,7 @@
 typedef double(*simple_func)(double);
 typedef unsigned int uint;
 
-const double precision = 1E-16;
+const double precision = 1E-15;
 const uint max_N = 100;
 
 // ¬ывод вещественного числа по указателю
