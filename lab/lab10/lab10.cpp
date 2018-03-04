@@ -34,23 +34,6 @@ void print_as_matrix(const double * a, const uint rows, const uint cols)
     }
 }
 
-void print_as_matrix4x4(const double * a)
-{
-    assert(a != nullptr);
-    const uint rows = 4, cols = 4;
-
-    double(&m)[rows][cols] = *((double(*)[rows][cols])(const void*)a);
-
-    for (uint i = 0; i < rows; ++i) {
-        for (uint j = 0; j < cols; ++j) {
-            // Форматированый вывод для выравнивания столбцов
-            cout << setw(cout.precision() * 2 + 1);
-            cout << m[i][j] << " ";
-        }
-        cout << endl;
-    }
-}
-
 void read(matrix m, uint & rows, uint & cols)
 {
     assert(m != nullptr);
