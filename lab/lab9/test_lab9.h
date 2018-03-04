@@ -19,11 +19,6 @@ bool test_name_sort_int(char *sort_name, sort_int sort = nullptr);
 bool test_name_find_int(char *find_name, find_int find = nullptr);
 
 // Функция генерации динамического массива с заданными значениями
-// Параметры:
-//     find — указатель на функцию,
-//     find_name — имя тестируемой функции.
-// Результат:
-//     true, если все тесты завершились удачно.
 int *test_array(std::initializer_list<int> list, uint &size);
 
 // Тесты функциии:

@@ -235,6 +235,7 @@ bool test_multiply(void *func)
     cerr << "OK" << endl;
     return true;
 }
+
 bool test_full_lab10()
 {
 #ifdef _DEBUG
@@ -249,5 +250,4 @@ bool test_full_lab10()
 #elif
     return true;
 #endif
-    
 }
