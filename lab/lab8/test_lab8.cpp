@@ -82,7 +82,7 @@ bool test_root(void * func)
 
 bool is_even(int x)
 {
-    return x % 2 != 0;
+    return x % 2 == 0;
 }
 
 bool is_odd(int x)
@@ -119,7 +119,7 @@ bool test_all(void * func)
 
 bool test_full_lab8()
 {
-    return test_swap_ptr( /*...*/ ) &&
-        test_root( /*...*/ ) &&
-        test_all( /*...*/ );
+    return test_swap_ptr( /* ваша реализация здесь */ ) &&
+        test_root( /* ваша реализация здесь */ ) &&
+        test_all(/* ваша реализация здесь */);
 }
