@@ -51,7 +51,7 @@ void print(const matrix m, const uint rows = max_ROWS, const uint cols = max_COL
 //     precision – точность сравнения.
 // Возвращаемое значение:
 //     true, если все элементы равны нолю.
-bool is_zeros(const double * a, const uint len, const double precision = 0.0);
+bool is_zeros(const double * a, const uint len, const double precision = ::precision);
 
 // Проверка, что в матрице есть нолевой столбец
 // Параметры:
@@ -61,7 +61,7 @@ bool is_zeros(const double * a, const uint len, const double precision = 0.0);
 //     precision – точность сравнения.
 // Возвращаемое значение:
 //     true, если существует столбец из нолей.
-bool has_zero_col(const matrix m, const uint rows, const uint cols, const double precision = 0.0);
+bool has_zero_col(const matrix m, const uint rows, const uint cols, const double precision = ::precision);
 
 // Проверка, что в матрице есть нолевая строка
 // Параметры:
@@ -71,7 +71,7 @@ bool has_zero_col(const matrix m, const uint rows, const uint cols, const double
 //     precision – точность сравнения.
 // Возвращаемое значение:
 //     true, если существует строка из нолей.
-bool has_zero_row(const matrix m, const uint rows, const uint cols, const double precision = 0.0);
+bool has_zero_row(const matrix m, const uint rows, const uint cols, const double precision = ::precision);
 
 // Удаление из матрицы всех нолевых столбцов
 // Параметры:
@@ -82,7 +82,7 @@ bool has_zero_row(const matrix m, const uint rows, const uint cols, const double
 // Результат:
 //     m – матрица без нолевых столбцов,
 //     cols – новое число столбцов.
-void remove_zero_cols(matrix m, const uint rows, uint &cols, const double precision = 0.0);
+void remove_zero_cols(matrix m, const uint rows, uint &cols, const double precision = ::precision);
 
 // Вставка в матрицу строки в заданную позицию, со смещением остальных строк вниз
 // Параметры:

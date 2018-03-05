@@ -1,3 +1,7 @@
+//
+// Лабораторная работа №10. Двумерные массивы
+// main.cpp
+//
 #include <iomanip>
 #include <iostream>
 #include "lab10.h"
