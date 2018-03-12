@@ -6,18 +6,26 @@ using namespace std;
 int main()
 {
     test_lab11_full();
+	setlocale(LC_ALL, "Rus");
 
-    setlocale(LC_ALL, "Rus");
-    uint size = 0;
-    int * a = nullptr;
-    read_new(a, size);
+	_CrtMemState _ms;
+	_CrtMemCheckpoint(&_ms);
+
+    uint rows, cols;
+	double **m = nullptr;
+	read_new(m, rows, cols);
+
     try {
-        duplicate_between_zeros(a, size);
+		cout << "Минимальный положительный элемент: " << min_positive(m, rows, cols) << endl;
     }
     catch (char* c) {
         cout << c << endl;
     }
-    print(a, size);
+
+    print(m, rows, cols);
+	delete_matrix(m, rows);
+
+	_CrtMemDumpAllObjectsSince(&_ms);
 
     system("pause");
     return 0;
