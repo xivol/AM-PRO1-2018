@@ -386,13 +386,9 @@
    <Group
       location = "group:prs"
       name = "prs">
-      <Group
-         location = "group:task_choice"
-         name = "task_choice">
-         <FileRef
-            location = "group:task_choice.xcodeproj">
-         </FileRef>
-      </Group>
+      <FileRef
+         location = "group:task_choice.xcodeproj">
+      </FileRef>
    </Group>
    <FileRef
       location = "group:README.md">
