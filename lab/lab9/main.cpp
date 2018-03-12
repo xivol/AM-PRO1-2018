@@ -22,7 +22,7 @@ int main()
     _CrtMemState _ms;
     _CrtMemCheckpoint(&_ms);
 
-	read(a, n);
+	read_new(a, n);
 	qsort(a, n);
 	print(a, n);
     

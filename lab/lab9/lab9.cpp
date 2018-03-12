@@ -10,7 +10,7 @@
 
 using namespace std;
 
-void read(int *&a, uint &n)
+void read_new(int *&a, uint &n)
 {
 	assert(a == nullptr);
 	cout << "Введите количество элементов: ";
