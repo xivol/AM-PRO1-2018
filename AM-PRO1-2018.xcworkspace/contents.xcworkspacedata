@@ -1,0 +1,396 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workspace
+   version = "1.0">
+   <Group
+      location = "group:hw"
+      name = "hw">
+      <Group
+         location = "group:hw2"
+         name = "hw2">
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw2.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:hw2.vcxproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:hw5"
+         name = "hw5">
+         <FileRef
+            location = "group:hw5.h">
+         </FileRef>
+         <FileRef
+            location = "group:hw5.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw5.vcxproj.filters">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:hw4"
+         name = "hw4">
+         <FileRef
+            location = "group:hw4.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw4.vcxproj.filters">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:hw3"
+         name = "hw3">
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw3.h">
+         </FileRef>
+         <FileRef
+            location = "group:hw3.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:hw3.vcxproj.filters">
+         </FileRef>
+      </Group>
+      <FileRef
+         location = "group:README.md">
+      </FileRef>
+      <Group
+         location = "group:hw6"
+         name = "hw6">
+         <FileRef
+            location = "group:hw6.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:hw6.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:test_hw6.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:hw6.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:hw6.h">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_hw6.h">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:hw1"
+         name = "hw1">
+         <FileRef
+            location = "group:hw1.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw1.vcxproj">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:lab"
+      name = "lab">
+      <Group
+         location = "group:lab8"
+         name = "lab8">
+         <FileRef
+            location = "group:lab8.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab8.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab8.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab8.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab8.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:lab8.h">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab1"
+         name = "lab1">
+         <FileRef
+            location = "group:1_hello.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:2_hello_friend.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab1.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:3_hello_debug.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:4_hello_for.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab1.vcxproj.filters">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab6"
+         name = "lab6">
+         <FileRef
+            location = "group:test_lab5.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab5.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab6.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab5.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab6.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab5.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab6.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab7"
+         name = "lab7">
+         <FileRef
+            location = "group:lab7.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab7.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab7.h">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab7.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:lab7.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab7.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab9"
+         name = "lab9">
+         <FileRef
+            location = "group:lab9.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab9.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab9.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab9.h">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab9.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab9.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab11"
+         name = "lab11">
+         <FileRef
+            location = "group:lab11.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab11.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab11.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:lab11.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab11.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab11.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab10"
+         name = "lab10">
+         <FileRef
+            location = "group:lab10.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab10.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab10.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab10.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab10.h">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab10.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab5"
+         name = "lab5">
+         <FileRef
+            location = "group:point.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab5.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab5.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab5.h">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab5.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab2"
+         name = "lab2">
+         <FileRef
+            location = "group:lab2.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab2.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab3"
+         name = "lab3">
+         <FileRef
+            location = "group:lab3.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab3.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab3.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab4"
+         name = "lab4">
+         <FileRef
+            location = "group:lab4.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab4.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab4.cpp">
+         </FileRef>
+      </Group>
+   </Group>
+   <Group
+      location = "group:prs"
+      name = "prs">
+      <FileRef
+         location = "group:task_choice.xcodeproj">
+      </FileRef>
+   </Group>
+   <FileRef
+      location = "group:README.md">
+   </FileRef>
+</Workspace>
