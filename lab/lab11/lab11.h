@@ -7,13 +7,6 @@
 typedef unsigned int uint;
 const double precision = 1E-15;
 
-// Ввод массива с клавиатуры
-// Выделяет динамическую память!
-// Параметры:
-//     a – указатель на массив, который будет создан,
-//     n – размер введенного массива.
-void read_new(int *&a, uint &n);
-
 // Ввод двумерного массива c клавиатуры
 // Параметры:
 //     m - указатель на начало массива,
@@ -41,22 +34,19 @@ void print(const int *a, uint n);
 //     cols - количество элементов в строке.
 void print(double const* const* m, const uint rows, const uint cols);
 
-// Функция поиска первого и последнего вхождения ноля в массиве.
-// Входные параметры:
-//      a - указатель на начало массива
-//      n - количество элементов в массиве
-// Выходные параметры:
-//      first - пеервое вхождение
-//      last - последнее
-// Если в массиве один ноль, first==last.
-// Если в массиве нет нолей, функция генерирует исключение char*.
-void find_zeros(const int* a, const uint n, uint &first, uint &last);
+// Найти минимальное положительное значение в массиве
+double min_positive(const double *a, const uint size);
 
-// Функция дублироания элементов массива,
-// находящихся между первым и последним нолем.
-//      a - указатель на начало массива
-//      n - количество элементов в массиве
-// Если в массиве не нолей, либо нет элементов для дублирования,
-// то функция генерирует исключение char*.
-void duplicate_between_zeros(int *&a, uint &n);
+// Найти минимальное положительное значение в матрице
+double min_positive(double const* const* m, const uint rows, const uint cols);
 
+// Найти отношение сумм элементов на главной и побочной диагоналях матрицы
+double major_div_minor(double const* const* a, const uint rows, const uint cols);
+
+typedef double aggregate(const double*, const uint);
+// Добавить в матрицу столбец результат вычисления заданной аггрегатной фнкции для каждой строки
+void append_col(double** &a, const uint rows, uint &cols, aggregate aggr);
+
+typedef bool condition(const double*, const uint);
+// Удалить из матрицы строки удволетворяющие заданному функцией условию.
+void remove_rows(double** &a, uint &rows, const uint cols, condition cond);
