@@ -1,5 +1,5 @@
-//
-// Лабораторная работа №11. Динамические массивы. Обработка ошибок.
+п»ї//
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–11. Р”РёРЅР°РјРёС‡РµСЃРєРёРµ РјР°СЃСЃРёРІС‹. РћР±СЂР°Р±РѕС‚РєР° РѕС€РёР±РѕРє.
 // lab11.cpp
 //
 #include <cassert>
@@ -9,22 +9,26 @@
 #include "crtdynmem.h"
 #include "lab11.h"
 
+#ifndef DBL_MAX
+#define DBL_MAX __DBL_MAX__
+#endif
+
 using namespace std;
 
 void read_new(double** &m, uint &rows, uint &cols)
 {
 	assert(m == nullptr);
-	cout << "Введите количество строк " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє " << endl;
 	cin >> rows;
-	cout << "Введите количество столбцов " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ " << endl;
 	cin >> cols;
 
-	// выделяем массив указателей
+	// РІС‹РґРµР»СЏРµРј РјР°СЃСЃРёРІ СѓРєР°Р·Р°С‚РµР»РµР№
 	m = new double*[rows];
 
-	cout << "Введите " << rows*cols << " элементов" << endl;
+	cout << "Р’РІРµРґРёС‚Рµ " << rows*cols << " СЌР»РµРјРµРЅС‚РѕРІ" << endl;
 	for (uint i = 0; i < rows; ++i) {
-		// выделяем память под каждую строку отдельно
+		// РІС‹РґРµР»СЏРµРј РїР°РјСЏС‚СЊ РїРѕРґ РєР°Р¶РґСѓСЋ СЃС‚СЂРѕРєСѓ РѕС‚РґРµР»СЊРЅРѕ
 		m[i] = new double[cols];
 		for (uint j = 0; j < cols; ++j)
 			cin >> m[i][j];
@@ -35,13 +39,13 @@ void delete_matrix(double **& m, const uint rows, const uint cols)
 {
 	assert(m != nullptr);
 
-	// Освобождаем память занимаемую строками
+	// РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ Р·Р°РЅРёРјР°РµРјСѓСЋ СЃС‚СЂРѕРєР°РјРё
 	for (uint i = 0; i < rows; ++i)
 		delete[] m[i];
 
-	// Освобождаем память занимаемую массивом строк
+	// РћСЃРІРѕР±РѕР¶РґР°РµРј РїР°РјСЏС‚СЊ Р·Р°РЅРёРјР°РµРјСѓСЋ РјР°СЃСЃРёРІРѕРј СЃС‚СЂРѕРє
 	delete[] m;
-	// Обнуляем указатель
+	// РћР±РЅСѓР»СЏРµРј СѓРєР°Р·Р°С‚РµР»СЊ
 	m = nullptr;
 }
 
@@ -58,10 +62,6 @@ void print(double const*const* m, const uint rows, const uint cols)
 	}
 }
 
-
-#ifndef DBL_MAX
-#define DBL_MAX __DBL_MAX__
-#endif
 double min_positive(const double *a, const uint size)
 {
 	assert(a != nullptr);
@@ -70,8 +70,8 @@ double min_positive(const double *a, const uint size)
 	for (uint i = 0; i < size; ++i)
 		if (a[i] > 0 && a[i] < min)
 			min = a[i];
-	if (min == DBL_MAX) // значение не изменилось
-		throw "Нет положительных элементов в массиве";
+	if (min == DBL_MAX) // Р·РЅР°С‡РµРЅРёРµ РЅРµ РёР·РјРµРЅРёР»РѕСЃСЊ
+		throw "РќРµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°СЃСЃРёРІРµ";
 	return min;
 }
 
@@ -81,10 +81,16 @@ double min_positive(double const* const* m, const uint rows, const uint cols)
 	double min = DBL_MAX;
 	for (uint i = 0; i < rows; ++i)
 	{
-		double row_min = min_positive(m[i], cols);
-		if (row_min < min) min = row_min;
+        try 
+        {
+            double row_min = min_positive(m[i], cols);
+            if (row_min < min) min = row_min;
+        }
+        catch (char *c) { // РµСЃР»Рё РІ СЃС‚СЂРѕРєРµ РЅРµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… С‡РёСЃРµР»            
+            continue;
+        }		
 	}
-	if (min == DBL_MAX) // значение не изменилось
-		throw "Нет положительных элементов в матрице";
+	if (min == DBL_MAX) // Р·РЅР°С‡РµРЅРёРµ РЅРµ РёР·РјРµРЅРёР»РѕСЃСЊ
+		throw "РќРµС‚ РїРѕР»РѕР¶РёС‚РµР»СЊРЅС‹С… СЌР»РµРјРµРЅС‚РѕРІ РІ РјР°С‚СЂРёС†Рµ";
 	return min;
 }

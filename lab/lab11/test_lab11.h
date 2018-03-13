@@ -1,19 +1,19 @@
-//
-// Лабораторная работа №4. Динамические массивы.
+п»ї//
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–11. Р”РёРЅР°РјРёС‡РµСЃРєРёРµ РјР°СЃСЃРёРІС‹.
+// test_lab11.cpp
 //
 #pragma once
 #include <initializer_list>
 #include "lab11.h"
 
-
-// Шаблон функции сравнения двух матриц на равенство.
-// Входные параметры:
-//     a, b - указатели на начало массива,
-//     rows - количество строк матриц а, b,
-//     cols - количество количество столбцов матриц а, b,
-//     precision - точность сравнения, по умолчанию = 0.
-// Возвращаемое значение:
-//     true - если все элементы матриц равны.
+// РЁР°Р±Р»РѕРЅ С„СѓРЅРєС†РёРё СЃСЂР°РІРЅРµРЅРёСЏ РґРІСѓС… РјР°С‚СЂРёС† РЅР° СЂР°РІРµРЅСЃС‚РІРѕ.
+// Р’С…РѕРґРЅС‹Рµ РїР°СЂР°РјРµС‚СЂС‹:
+//     a, b - СѓРєР°Р·Р°С‚РµР»Рё РЅР° РЅР°С‡Р°Р»Рѕ РјР°СЃСЃРёРІР°,
+//     rows - РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚СЂРѕРє РјР°С‚СЂРёС† Р°, b,
+//     cols - РєРѕР»РёС‡РµСЃС‚РІРѕ РєРѕР»РёС‡РµСЃС‚РІРѕ СЃС‚РѕР»Р±С†РѕРІ РјР°С‚СЂРёС† Р°, b,
+//     precision - С‚РѕС‡РЅРѕСЃС‚СЊ СЃСЂР°РІРЅРµРЅРёСЏ, РїРѕ СѓРјРѕР»С‡Р°РЅРёСЋ = 0.
+// Р’РѕР·РІСЂР°С‰Р°РµРјРѕРµ Р·РЅР°С‡РµРЅРёРµ:
+//     true - РµСЃР»Рё РІСЃРµ СЌР»РµРјРµРЅС‚С‹ РјР°С‚СЂРёС† СЂР°РІРЅС‹.
 template <typename T>
 bool is_equal_matrix(const T a, const T b, const uint rows, const uint cols, const double precision = 0.0)
 {
@@ -28,14 +28,20 @@ bool is_equal_matrix(const T a, const T b, const uint rows, const uint cols, con
     return true;
 }
 
-// Функция генерации динамического массива с заданными значениями
-int *test_array(std::initializer_list<int> list, uint &size);
+// Р¤СѓРЅРєС†РёСЏ РіРµРЅРµСЂР°С†РёРё РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° СЃ Р·Р°РґР°РЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
+double *test_array(const std::initializer_list<double> &list, uint &size);
 
-// Функция генерации разреженного динамического массива с заданными значениями
+// Р¤СѓРЅРєС†РёСЏ РіРµРЅРµСЂР°С†РёРё СЂР°Р·СЂРµР¶РµРЅРЅРѕРіРѕ РґРёРЅР°РјРёС‡РµСЃРєРѕРіРѕ РјР°СЃСЃРёРІР° СЃ Р·Р°РґР°РЅРЅС‹РјРё Р·РЅР°С‡РµРЅРёСЏРјРё
 double **test_sparce_matrix(const std::initializer_list<std::initializer_list<double>> &m, uint &rows, uint &cols);
 
-bool test_find_zeros();
+bool test_min_positive();
 
-bool test_duplicate_between_zeros();
+bool test_min_positive_matrix();
+
+bool test_major_div_minor(void *func = nullptr);
+
+bool test_append_col(void *func = nullptr);
+
+bool test_remove_rows(void *func = nullptr);
 
 bool test_lab11_full();
