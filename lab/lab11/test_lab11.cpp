@@ -15,7 +15,7 @@ bool test_lab11_full()
 {
 #ifdef _DEBUG
     return false;
-#elif
+#else
     return true;
 #endif    
 }

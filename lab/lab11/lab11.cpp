@@ -58,6 +58,10 @@ void print(double const*const* m, const uint rows, const uint cols)
 	}
 }
 
+
+#ifndef DBL_MAX
+#define DBL_MAX __DBL_MAX__
+#endif
 double min_positive(const double *a, const uint size)
 {
 	assert(a != nullptr);

@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Workspace
    version = "1.0">
+   <FileRef
+      location = "group:crossplatform_leak_detector/crossplatform_leak_detector.xcodeproj">
+   </FileRef>
    <Group
       location = "group:hw"
       name = "hw">

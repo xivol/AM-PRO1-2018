@@ -1,6 +1,8 @@
 #include <iostream>
 #include "lab11.h"
 #include "test_lab11.h"
+#include "crtdynmem.h"
+
 using namespace std;
 
 int main()
@@ -8,8 +10,8 @@ int main()
     test_lab11_full();
 	setlocale(LC_ALL, "Rus");
 
-	_CrtMemState _ms;
-	_CrtMemCheckpoint(&_ms);
+	//_CrtMemState _ms;
+	//_CrtMemCheckpoint(&_ms);
 
     uint rows, cols;
 	double **m = nullptr;
@@ -25,7 +27,7 @@ int main()
     print(m, rows, cols);
 	delete_matrix(m, rows);
 
-	_CrtMemDumpAllObjectsSince(&_ms);
+	//_CrtMemDumpAllObjectsSince(&_ms);
 
     system("pause");
     return 0;

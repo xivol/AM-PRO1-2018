@@ -251,7 +251,7 @@ bool test_full_lab10()
         test_insert_row(/*ваша реализация здесь*/) &&
         test_transpose(/*ваша реализация здесь*/) &&
         test_multiply(/*ваша реализация здесь*/);
-#elif
+#else
     return true;
 #endif
 }

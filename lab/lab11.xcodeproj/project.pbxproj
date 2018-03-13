@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E03BF09F2057B42C0081835B /* libnvwa.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E03BF0A02057B42C0081835B /* libnvwa.a */; };
 		E0EDD3642056994400407818 /* test_lab11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0EDD35D2056994400407818 /* test_lab11.cpp */; };
 		E0EDD3652056994400407818 /* lab11.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0EDD3622056994400407818 /* lab11.cpp */; };
 		E0EDD3662056994400407818 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0EDD3632056994400407818 /* main.cpp */; };
@@ -25,6 +26,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		E03BF0A02057B42C0081835B /* libnvwa.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libnvwa.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EDD350205698B800407818 /* lab11 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = lab11; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0EDD35D2056994400407818 /* test_lab11.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_lab11.cpp; sourceTree = "<group>"; };
 		E0EDD35E2056994400407818 /* crtdynmem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crtdynmem.h; sourceTree = "<group>"; };
@@ -39,17 +41,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E03BF09F2057B42C0081835B /* libnvwa.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E03BF09E2057B42C0081835B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E03BF0A02057B42C0081835B /* libnvwa.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		E0EDD347205698B800407818 = {
 			isa = PBXGroup;
 			children = (
 				E0EDD35B2056994400407818 /* lab11 */,
 				E0EDD351205698B800407818 /* Products */,
+				E03BF09E2057B42C0081835B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -248,7 +260,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NUE223H73G;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../crossplatform_leak_detector/nvwa/";
 			};
 			name = Debug;
 		};
@@ -257,7 +271,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = NUE223H73G;
+				HEADER_SEARCH_PATHS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/../crossplatform_leak_detector/nvwa/";
 			};
 			name = Release;
 		};
