@@ -18,18 +18,21 @@
     <ClCompile Include="main.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="lab12.cpp">
+    <ClCompile Include="lab13.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="test_lab12.cpp">
+    <ClCompile Include="test_lab13.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="lab12.h">
+    <ClInclude Include="lab13.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="test_lab12.h">
+    <ClInclude Include="test_lab13.h">
+      <Filter>Заголовочные файлы</Filter>
+    </ClInclude>
+    <ClInclude Include="crtdynmem.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>
