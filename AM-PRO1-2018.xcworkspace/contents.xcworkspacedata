@@ -116,6 +116,65 @@
    <Group
       location = "group:lab"
       name = "lab">
+      <Group
+         location = "group:lab12"
+         name = "lab12">
+         <FileRef
+            location = "group:test_lab12.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab12.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab12.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab12.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab12.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab12.h">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab13"
+         name = "lab13">
+         <FileRef
+            location = "group:lab13.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab13.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab13.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab13.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab13.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab13.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
       <FileRef
          location = "group:lab10.xcodeproj">
       </FileRef>
