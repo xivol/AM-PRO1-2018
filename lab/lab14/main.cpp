@@ -6,6 +6,7 @@
 #include <iostream>
 #include "crtdynmem.h"
 #include "lab14.h"
+#include "test_lab14.h"
 
 using namespace std;
 
@@ -13,6 +14,7 @@ int main()
 {
     setlocale(LC_ALL, "Russian");
     system("chcp 1251");
+    test_full_lab14();
     
     cout << "ֲגוהטעו טלÿ פאיכא: ";
     char fname[20];

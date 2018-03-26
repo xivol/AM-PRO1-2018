@@ -19,8 +19,8 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{ED2FDDE3-CAEB-4A54-9F30-82DF55E1FBD5}</ProjectGuid>
-    <RootNamespace>lab14</RootNamespace>
+    <ProjectGuid>{97341F23-32A6-4616-B22C-4BE033B3E59C}</ProjectGuid>
+    <RootNamespace>hw9</RootNamespace>
     <WindowsTargetPlatformVersion>8.1</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -118,22 +118,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClInclude Include="crtdynmem.h" />
-    <ClInclude Include="test_lab14.h" />
-    <ClInclude Include="lab14.h" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="README.md" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="lab14.cpp" />
-    <ClCompile Include="main.cpp" />
-    <ClCompile Include="test_lab14.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <Text Include="array.txt" />
-    <Text Include="result_min_max_for_line.txt" />
-    <Text Include="test_min_max_for_line.txt" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
