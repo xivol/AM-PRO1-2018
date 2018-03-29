@@ -120,6 +120,20 @@
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
+  <ItemGroup>
+    <Text Include="jabberwocky.txt" />
+    <Text Include="jabberwocky_test_print_len.txt" />
+    <Text Include="jabberwocky_test_remove_the.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="test_lab15.cpp" />
+    <ClCompile Include="lab15.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="test_lab15.h" />
+    <ClInclude Include="lab15.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
