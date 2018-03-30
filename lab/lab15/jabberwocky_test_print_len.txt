@@ -1,0 +1,34 @@
+﻿'Twas brillig, and the slithy toves : 35
+Did gyre and gimble in the wabe; : 32
+All mimsy were the borogoves, : 29
+And the mome raths outgrabe. : 28
+ : 0
+"Beware the Jabberwock, my son! : 31
+The jaws that bite, the claws that catch! : 41
+Beware the Jubjub bird, and shun : 32
+The frumious Bandersnatch!" : 27
+ : 0
+He took his vorpal sword in hand: : 33
+Long time the manxome foe he sought— : 36
+So rested he by the Tumtum tree, : 32
+And stood awhile in thought. : 28
+ : 0
+And as in uffish thought he stood, : 34
+The Jabberwock, with eyes of flame, : 35
+Came whiffling through the tulgey wood, : 39
+And burbled as it came! : 23
+ : 0
+One, two! One, two! and through and through : 43
+The vorpal blade went snicker-snack! : 36
+He left it dead, and with its head : 34
+He went galumphing back. : 24
+ : 0
+"And hast thou slain the Jabberwock? : 36
+Come to my arms, my beamish boy! : 32
+O frabjous day! Callooh! Callay!" : 33
+He chortled in his joy. : 23
+ : 0
+'Twas brillig, and the slithy toves : 35
+Did gyre and gimble in the wabe; : 32
+All mimsy were the borogoves, : 29
+And the mome raths outgrabe : 27

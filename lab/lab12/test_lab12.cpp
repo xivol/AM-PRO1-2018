@@ -163,22 +163,22 @@ bool test_remove_chr(void *func)
     char *result = " Hello, world! ";
 
     remove_chr(str, c);
-    assert(str_cmp(str, result));
+    assert(str_cmp(str, result) == 0);
 
     c = ' ';
     result = "Hello,world!";
     remove_chr(str, c);
-    assert(str_cmp(str, result));
+    assert(str_cmp(str, result) == 0);
     
     c = 'o';
     result = "Hell,wrld!";
     remove_chr(str, c);
-    assert(str_cmp(str, result));
+    assert(str_cmp(str, result) == 0);
 
     c = 'l';
     result = "He,wrd!";
     remove_chr(str, c);
-    assert(str_cmp(str, result));
+    assert(str_cmp(str, result) == 0);
 
     cerr << "OK" << endl;
     return true;
@@ -200,12 +200,12 @@ bool test_insert_str(void *func)
     char *result = "Hello, world!";
 
     insert_str(str, str2, c);
-    assert(str_cmp(str, result));
+    assert(str_cmp(str, result) == 0);
 
     c = ',';
     result = "Hello, my world!";
     insert_str(str, str2, c);
-    assert(str_cmp(str, result));
+    assert(str_cmp(str, result) == 0);
 
     char max[Max_Length] = "\
 _______________-_______________-_______________-_______________-\
