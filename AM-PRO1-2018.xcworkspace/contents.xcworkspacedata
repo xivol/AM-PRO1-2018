@@ -8,6 +8,48 @@
       location = "group:hw"
       name = "hw">
       <Group
+         location = "group:hw7"
+         name = "hw7">
+         <FileRef
+            location = "group:hw7.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:hw7.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:hw8"
+         name = "hw8">
+         <FileRef
+            location = "group:hw8.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw8.vcxproj">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:hw9"
+         name = "hw9">
+         <FileRef
+            location = "group:hw9.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:hw9.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:SWTNH.txt">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:hw2"
          name = "hw2">
          <FileRef
@@ -116,6 +158,53 @@
    <Group
       location = "group:lab"
       name = "lab">
+      <Group
+         location = "group:lab14"
+         name = "lab14">
+         <FileRef
+            location = "group:test_lab14.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:array.txt">
+         </FileRef>
+         <FileRef
+            location = "group:lab14.h">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab14.h">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab14.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:result_min_max_for_line.txt">
+         </FileRef>
+         <FileRef
+            location = "group:test_min_max_for_line.txt">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab15"
+         name = "lab15">
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab15.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab15.vcxproj.filters">
+         </FileRef>
+      </Group>
       <Group
          location = "group:lab12"
          name = "lab12">
