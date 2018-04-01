@@ -1,4 +1,4 @@
-﻿//
+//
 // Лабораторная работа №15. Текстовые файлы. Обработка строк
 // test_lab15.cpp
 //
@@ -185,7 +185,7 @@ bool test_word_count(void *func)
 	// файл без слов
 	fout.open(test_filename);
 	assert(fout.is_open());
-	const char *test_string = "\n\s\s\n\s";
+	const char *test_string = "\n  \n ";
 	fout << test_string;
 	fout.close();
 
@@ -203,7 +203,7 @@ bool test_word_count(void *func)
 	// файл с одним словом
 	fout.open(test_filename);
 	assert(fout.is_open());
-	test_string = "\r\nHello,world!\r\n ";
+	test_string = "\nHello,world!\n ";
 	fout << test_string;
 	fout.close();
 
@@ -221,7 +221,7 @@ bool test_word_count(void *func)
 	// файл с четырьмя словами
 	fout.open(test_filename);
 	assert(fout.is_open());
-	test_string = "Don't worry!\r\nBe happy!";
+	test_string = "Don't worry!\nBe happy!";
 	fout << test_string;
 	fout.close();
 
@@ -249,6 +249,8 @@ bool test_remove_word(const char *input, const char *output, const char * word, 
 	ifstream  src(input, std::ios::binary);
 	ofstream  dst(test_filename, std::ios::binary);
 	dst << src.rdbuf();
+    src.close();
+    dst.close();
 
 	remove_word(test_filename, word);
 
@@ -275,8 +277,8 @@ bool test_full_lab15()
 	return test_is_equal_text(input, "jabberwocky_test_print_len.txt") &&
 		test_print_len(input, "jabberwocky_test_print_len.txt") &&
 		test_alpha_count(/*ваша реализация здесь*/) &&
-		test_word_count(/*ваша реализация здесь*/);
-		test_remove_word(input, "jabberwocky_test_remove_the.txt", "the", /*ваша реализация здесь*/);
+		test_word_count(/*ваша реализация здесь*/) &&
+		test_remove_word(input, "jabberwocky_test_remove_the.txt", "the" /*ваша реализация здесь*/);
 
 #else
 	return true;

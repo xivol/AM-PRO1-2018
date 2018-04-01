@@ -1,4 +1,4 @@
-﻿'Twas brillig, and the slithy toves : 35
+'Twas brillig, and the slithy toves : 35
 Did gyre and gimble in the wabe; : 32
 All mimsy were the borogoves, : 29
 And the mome raths outgrabe. : 28
@@ -9,7 +9,7 @@ Beware the Jubjub bird, and shun : 32
 The frumious Bandersnatch!" : 27
  : 0
 He took his vorpal sword in hand: : 33
-Long time the manxome foe he sought— : 36
+Long time the manxome foe he sought- : 36
 So rested he by the Tumtum tree, : 32
 And stood awhile in thought. : 28
  : 0

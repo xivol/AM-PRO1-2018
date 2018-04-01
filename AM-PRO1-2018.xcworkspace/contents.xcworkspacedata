@@ -177,6 +177,9 @@
             location = "group:test_lab14.h">
          </FileRef>
          <FileRef
+            location = "group:lab14.vcxproj.filters">
+         </FileRef>
+         <FileRef
             location = "group:README.md">
          </FileRef>
          <FileRef
@@ -191,18 +194,45 @@
          <FileRef
             location = "group:main.cpp">
          </FileRef>
+         <FileRef
+            location = "group:lab14.vcxproj">
+         </FileRef>
       </Group>
       <Group
          location = "group:lab15"
          name = "lab15">
          <FileRef
+            location = "group:jabberwocky.txt">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab15.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:jabberwocky_test_remove_the.txt">
+         </FileRef>
+         <FileRef
+            location = "group:jabberwocky_test_print_len.txt">
+         </FileRef>
+         <FileRef
+            location = "group:lab15.h">
+         </FileRef>
+         <FileRef
             location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab15.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab15.h">
          </FileRef>
          <FileRef
             location = "group:lab15.vcxproj">
          </FileRef>
          <FileRef
             location = "group:lab15.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
          </FileRef>
       </Group>
       <Group
