@@ -18,10 +18,10 @@
     <ClCompile Include="main.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="test_structs.cpp">
+    <ClCompile Include="lab16.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
-    <ClCompile Include="lab16.cpp">
+    <ClCompile Include="test_lab16.cpp">
       <Filter>Файлы исходного кода</Filter>
     </ClCompile>
   </ItemGroup>
@@ -37,10 +37,10 @@
     <ClInclude Include="structs.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="test_structs.h">
+    <ClInclude Include="lab16.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
-    <ClInclude Include="lab16.h">
+    <ClInclude Include="test_lab16.h">
       <Filter>Заголовочные файлы</Filter>
     </ClInclude>
   </ItemGroup>

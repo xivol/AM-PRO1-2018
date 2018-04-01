@@ -120,7 +120,7 @@
   <ItemGroup>
     <ClCompile Include="lab16.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="test_structs.cpp" />
+    <ClCompile Include="test_lab16.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="points.dat" />
@@ -129,7 +129,7 @@
   <ItemGroup>
     <ClInclude Include="lab16.h" />
     <ClInclude Include="structs.h" />
-    <ClInclude Include="test_structs.h" />
+    <ClInclude Include="test_lab16.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

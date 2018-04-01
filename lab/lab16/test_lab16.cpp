@@ -1,11 +1,10 @@
 //
-// Лабораторная №11. Структуры. Двоичнвые файлы.
-// teest_structs.cpp
+// Лабораторная №16. Двоичнвые файлы. Шаблонные функции
+// test_lab16.cpp
 //
-
 #include <iostream>
 #include <fstream>
-#include "test_structs.h"
+#include "test_lab16.h"
 #include "structs.h"
 
 using namespace std;

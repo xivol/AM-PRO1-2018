@@ -1,10 +1,10 @@
 //
 // Лабораторная №16. Двоичнвые файлы. Шаблонные функции
-// lab16.h
+// main.cpp
 //
 #include <iostream>
 #include "structs.h"
-#include "test_structs.h"
+#include "test_lab16.h"
 
 using namespace std;
 
