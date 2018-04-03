@@ -8,10 +8,6 @@
 
 using namespace std;
 
-/*
-  Постчитать количество точек в файле.
-*/
-
 int main()
 {
     setlocale(LC_ALL, "Russian");
