@@ -21,7 +21,7 @@ uint credits_sum(const student &stud)
     return sum;
 }
 
-student get_student(const string &s)
+student read_student(const string &s)
 {
     student stud;
     // поток данных из строки
@@ -63,7 +63,7 @@ void binary_from_text(const char *filename)
         getline(fin, student_str);
 
         if (student_str.length() != 0) {
-            student stud = get_student(student_str);
+            student stud = read_student(student_str);
             write_binary(fout, stud);
         }
     }

@@ -7,6 +7,7 @@
 #include <cstdint>
 #include <iostream>
 #include <string>
+#include "structs.h"
 
 // Данные о студенте:
 //     fullname - ФИО;
@@ -29,7 +30,7 @@ struct student
 // Входные данные:
 //     stud - ссылка на данные студента.
 // Возвращает сумммарный балл студента.
-uint32_t credits_sum(const student &stud);
+uint credits_sum(const student &stud);
 
 // Чтение данных студента из строки.
 // Входные данные:
@@ -37,7 +38,7 @@ uint32_t credits_sum(const student &stud);
 //     поля разделяются символами табуляции.
 // Возвраает заполненную структуру.
 // В случае некорректной строки, выбрасывает исключение char*
-student get_student(const std::string &s);
+student read_student(const std::string &s);
 
 // Вывод данных студента в cout.
 // Входные данные:

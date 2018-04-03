@@ -3,17 +3,15 @@
 // structs.h
 //
 #pragma once
-
 #include <cassert>
 #include <fstream>
 
 typedef unsigned int uint;
-
 // Точка на плоскости 
 // (x,y)
-struct point
+struct point 
 {
-    double x, y;
+    double x, y;    
 };
 
 // Календарная дата
@@ -34,15 +32,15 @@ struct person
     char gender;
 };
 
-
 // Шаблонная функция чтения из файла данных в двоичной форме.
 // Входные параметры:
-//     fin - поток чтения из файла (должен быть открыт c ios::binary)
-// Возвращает чередной элемент типа T, считаный из файла.
+//     fin - поток чтения из файла (должен быть открыт c ios::binary).
+// Возвращает очередной элемент типа T, считаный из файла.
 // Если чтение не удалось, fin.good() == false.
 template <typename T>
 T read_binary(std::ifstream &fin)
 {
+    assert(fin);
     T t;
     fin.read(reinterpret_cast<char*> (&t), sizeof(t));
     return t;
@@ -56,6 +54,7 @@ T read_binary(std::ifstream &fin)
 template <typename T>
 void write_binary(std::ofstream &fout, T &t)
 {
+    assert(fout);
     fout.write(reinterpret_cast<char*> (&t), sizeof(t));
 }
 
@@ -68,7 +67,7 @@ template <typename T>
 uint number_of(const char *filename)
 {
     assert(filename);
-
+    
     std::ifstream fin(filename, std::ios::binary);
     if (!fin.is_open())
         throw "Невозможно открыть файл!";
@@ -77,7 +76,7 @@ uint number_of(const char *filename)
     while (!fin.eof()) {
         // считать очередной элемент из файла
         read_binary<T>(fin);
-        if (fin.good())   // если чтение прошло успешно
+        if (fin)   // если чтение прошло успешно
             count++;
     }
 
