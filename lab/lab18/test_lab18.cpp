@@ -1,14 +1,12 @@
- //
-// Лабораторная работа №13. Динамические структуры данных. Списки
-// test_tlist.cpp
 //
-
+// Лабораторная работа №18. Динамические структуры данных. Списки
+// test_lab18.cpp
+//
 #include <cassert>
 #include <iostream>
-#include <fstream>
 #include "crtdynmem.h"
-#include "test_tlist.h"
-#include "tlist.h"
+#include "test_lab18.h"
+#include "lab18.h"
 
 using namespace std;
 

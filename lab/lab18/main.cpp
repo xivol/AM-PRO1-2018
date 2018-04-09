@@ -6,16 +6,19 @@
 
 #include <iostream>
 #include "crtdynmem.h"
-#include "tlist.h"
-#include "test_tlist.h"
+#include "lab18.h"
+#include "test_lab18.h"
 
 using namespace std;
 
 int main()
 {
-   setlocale(LC_ALL, "Russian");
+    setlocale(LC_ALL, "Russian");
     test_full_lab18();
 
+    _CrtMemState _ms;
+    _CrtMemCheckpoint(&_ms);
+    
     uint n;
     cout << "Введите количество элементов списка" << endl;
     cin >> n;
@@ -32,8 +35,8 @@ int main()
     cout << "Количество нулевых элементов: " << cnt << endl;
     delete_list(list);
 
-    _CrtDumpMemoryLeaks();
-    
+    _CrtMemDumpAllObjectsSince(&_ms);
+
     system("pause");
     return 0;
 }

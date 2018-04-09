@@ -119,16 +119,16 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="test_tlist.cpp" />
-    <ClCompile Include="tlist.cpp" />
+    <ClCompile Include="test_lab18.cpp" />
+    <ClCompile Include="lab18.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="crtdynmem.h" />
-    <ClInclude Include="test_tlist.h" />
-    <ClInclude Include="tlist.h" />
+    <ClInclude Include="test_lab18.h" />
+    <ClInclude Include="lab18.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
