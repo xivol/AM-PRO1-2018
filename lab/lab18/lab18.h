@@ -54,7 +54,7 @@ uint length(const tlist *begin);
 //     begin - указатель на начало списка;
 //     x - новое значение.
 // Возвращает указатель на новое начало списка.
-tlist *add_first(const tlist *begin, tlist::datatype x);
+tlist *add_first(tlist *&begin, tlist::datatype x);
 
 // Вставка элемента в конец списка.
 // Входные параметры:
@@ -73,6 +73,5 @@ tlist *insert_before(tlist *&begin, tlist *item, tlist::datatype x);
 
 // Удаление элемента после указанного элемента списка.
 // Входные параметры:
-//     begin - указатель на начало списка;
 //     item - указатель на элемент для удаления.
-void remove_after(tlist *&begin, tlist *item);
+void remove_after(tlist *item);

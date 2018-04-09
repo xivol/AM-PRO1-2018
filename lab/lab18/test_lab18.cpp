@@ -95,7 +95,7 @@ bool test_add_first(void *func)
         cerr << "NOT IMPLEMENTED" << endl;
         return true;
     }
-    tlist *(*add_first)(const tlist *, tlist::datatype ) = (tlist *(*)(const tlist *, tlist::datatype )) func;
+    tlist *(*add_first)(tlist *&, tlist::datatype ) = (tlist *(*)(tlist *&, tlist::datatype )) func;
 
     // пустой список
     tlist *list = nullptr;
@@ -105,7 +105,7 @@ bool test_add_first(void *func)
     tlist *result = add_first(list, x);
     
     assert(result);
-    assert(result->next == list);
+    assert(result == list);
     assert(result->data == x);
     is_equal_test(list, result_list);
 
@@ -118,7 +118,7 @@ bool test_add_first(void *func)
     
     result = add_first(list, x);
     assert(result);
-    assert(result->next == list);
+    assert(result == list);
     assert(result->data == x);
     is_equal_test(list, result_list);
 
@@ -132,7 +132,7 @@ bool test_add_first(void *func)
 
     result = add_first(list, x);
     assert(result);
-    assert(result->next == list);
+    assert(result == list);
     assert(result->data == x);
     is_equal_test(list, result_list);
 
@@ -151,7 +151,7 @@ bool test_add_last(void *func)
         cerr << "NOT IMPLEMENTED" << endl;
         return true;
     }
-    tlist *(*add_last)(const tlist *, tlist::datatype) = (tlist *(*)(const tlist *, tlist::datatype)) func;
+    tlist *(*add_last)(tlist *&, tlist::datatype) = (tlist *(*)(tlist *&, tlist::datatype)) func;
 
     // пустой список
     tlist *list = nullptr;
@@ -200,12 +200,94 @@ bool test_add_last(void *func)
     return true;
 }
 
+bool test_insert_before(void *func)
+{
+	cerr << "test insert_before: ";
+	if (func == nullptr) {
+		cerr << "NOT IMPLEMENTED" << endl;
+		return true;
+	}
+	tlist *(*insert_before)(tlist *&, tlist *, tlist::datatype) = (tlist *(*)(tlist *&, tlist *, tlist::datatype)) func;
+
+	// пустой список
+	tlist *list = nullptr;
+	tlist::datatype x = 0;
+	array_list result_list = test_list({ x });
+
+	tlist *result = insert_before(list, nullptr, x);
+
+	assert(result);
+	assert(result->next == nullptr);
+	assert(result->data == x);
+	is_equal_test(list, result_list);
+
+	delete[]result_list;
+	delete result;
+
+	// просто список
+	list = test_list({ 1,2,3,4,5,6,7 });
+	result_list = test_list({ 1,2,3,x,4,5,6,7 });
+
+	result = insert_before(list, &list[3], x);
+
+	assert(result);
+	assert(result->next == &list[3]);
+	assert((&list[2])->next == result);
+	assert(result->data == x);
+	is_equal_test(list, result_list);
+
+	delete[]list;	
+	delete[]result_list;
+	delete result;
+
+	cerr << "OK" << std::endl;
+	return true;
+}
+
+bool test_remove_after(void *func)
+{
+	cerr << "test remove_after: ";
+	if (func == nullptr) {
+		cerr << "NOT IMPLEMENTED" << endl;
+		return true;
+	}
+	tlist *(*remove_after)(tlist *) = (tlist *(*)(tlist *)) func;
+
+	array_list list = test_list({ 1,2,3,4,5,6,7 });
+	(&list[2])->next = new tlist{ 0, &list[3] };
+	array_list result_list = test_list({ 1,2,3,4,5,6,7 });
+	
+	remove_after(&list[2]);
+
+	assert((&list[2])->next == &list[3]);
+	is_equal_test(list, result_list);
+
+	delete[]list;
+	delete[]result_list;
+
+	list = test_list({ 1 });
+	result_list = test_list({ 1});
+
+	remove_after(&list[0]);
+
+	is_equal_test(list, result_list);
+
+	delete[]list;
+	delete[]result_list;
+
+	cerr << "OK" << std::endl;
+	return true;
+}
+
+
 bool test_full_lab18()
 {
 #ifdef _DEBUG
-    return  test_find() &&
-        test_length(/*ваша реализация здесь*/) &&
-        test_add_first(/*ваша реализация здесь*/) &&
-        test_add_last(/*ваша реализация здесь*/);
+	return  test_find() &&
+		test_length(/*ваша реализация здесь*/) &&
+		test_add_first(/*ваша реализация здесь*/) &&
+		test_add_last(/*ваша реализация здесь*/) &&
+		test_insert_before(/*ваша реализация здесь*/) &&
+		test_remove_after(/*ваша реализация здесь*/);
 #endif
 }
