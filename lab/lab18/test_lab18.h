@@ -16,8 +16,7 @@ typedef tlist *array_list;
 
 // Функция получения массива-списка из массива значений.
 // Входные параметры:
-//     array - массив значений элементов списка;
-//     length - количество значений.
+//     list - список инициализации.
 // Возвращает массив элементов tlist.
 array_list test_list(const std::initializer_list<tlist::datatype> &list);
 

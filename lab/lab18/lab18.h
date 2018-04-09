@@ -33,7 +33,7 @@ void delete_list(tlist *&begin);
 // Функция вывода списка на консоль.
 // Входные параметры:
 //     begin - указатель на начало списка.
-void print_list(const tlist *begin);
+void print(const tlist *begin);
 
 // Функция поиска элемента.
 // Входные параметры:

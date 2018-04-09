@@ -266,7 +266,7 @@ bool test_remove_after(void *func)
 	delete[]result_list;
 
 	list = test_list({ 1 });
-	result_list = test_list({ 1});
+	result_list = test_list({ 1 });
 
 	remove_after(&list[0]);
 

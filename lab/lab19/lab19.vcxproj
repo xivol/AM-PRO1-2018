@@ -119,13 +119,13 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="crtdynmem.h" />
-    <ClInclude Include="test_tlist.h" />
-    <ClInclude Include="tlist.h" />
+    <ClInclude Include="test_lab19.h" />
+    <ClInclude Include="lab19.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="lab19.cpp" />
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="test_tlist.cpp" />
-    <ClCompile Include="tlist_rec.cpp" />
+    <ClCompile Include="test_lab19.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
