@@ -152,8 +152,139 @@ bool test_insert_middle(void *func)
 	cerr << "OK" << endl;
 	return true;
 }
+
+
+bool test_remove_k_after_x(void *func)
+{
+    cerr << "test remove_k_after_x: ";
+    if (func == nullptr) {
+        cerr << "NOT IMPLEMENTED" << endl;
+        return true;
+    }
+    void (*remove_k_after_x)(const tlist *, tlist::datatype, uint) = (void (*)(const tlist *, tlist::datatype, uint )) func;
+    
+    array_list list = test_list({ 1,2,3,4,5,6,7,8,9 });
+    tlist::datatype x = 0;
+    uint k = 1;
+    array_list result_list = test_list({ 1,2,3,4,5,6,7,8,9 });
+    remove_k_after_x(list, x, k);
+    is_equal_test(list, result_list);
+
+    list[0].next = new tlist{ 0, list[0].next };
+    x = list[0].data;
+    remove_k_after_x(list, x, k);
+    is_equal_test(list, result_list);
+
+    delete[] list;
+    delete[] result_list;
+    
+    list = test_list({ 1,1,2,1,1 });
+    x = 1;
+    for (int i = 1; i < 5; ++i)
+        if(list[i].data == x)
+            list[i].next = new tlist{ 0, list[i].next };
+    result_list = test_list({ 1,1,2,1,1 });
+    
+    remove_k_after_x(list, x, k);
+    is_equal_test(list, result_list);
+
+    delete[] list;
+    delete[] result_list;
+
+    list = test_list({ 1,1,2,1,1 });
+    k = 2;
+    x = 1;
+    for (int i = 1; i < 5; ++i)
+        if (list[i].data == x) {
+            list[i].next = new tlist{ 0, list[i].next };
+            list[i].next = new tlist{ 0, list[i].next };
+        }
+    result_list = test_list({ 1,1,2,1,1 });
+
+    remove_k_after_x(list, x, k);
+    is_equal_test(list, result_list);
+
+    delete[] list;
+    delete[] result_list;
+
+    cerr << "OK" << endl;
+    return true;
+}
+
+bool test_insert_x_before_y(void *func)
+{
+    cerr << "test insert_x_before_y: ";
+    if (func == nullptr) {
+        cerr << "NOT IMPLEMENTED" << endl;
+        return true;
+    }
+    void (*insert_x_before_y)(tlist *&, tlist::datatype, tlist::datatype) = (void (*)(tlist *&, tlist::datatype, tlist::datatype)) func;
+
+    array_list list = test_list({ 1,2,3,4 });
+    tlist::datatype x = 0;
+    tlist::datatype y = 1;
+    array_list result_list = test_list({ 0,1,2,3,4 });
+    
+    insert_x_before_y(list, x, y);
+    is_equal_test(list, result_list);
+    
+    delete[] list->next;
+    delete list;
+    delete[] result_list;
+
+    list = test_list({ 2,1,2,1,2 });
+    result_list = test_list({ 2,0,1,2,0,1,2 });
+
+    insert_x_before_y(list, x, y);
+    is_equal_test(list, result_list);
+    
+    delete list->next;
+    delete (&list[2])->next;
+    delete[] list;
+    delete[] result_list;
+    
+    cerr << "OK" << endl;
+    return true;
+}
+
+bool test_read_sorted(void *func)
+{
+    cerr << "test read_sorted: ";
+    if (func == nullptr) {
+        cerr << "NOT IMPLEMENTED" << endl;
+        return true;
+    }
+    tlist *(*read_sorted)(const char *) = (tlist *(*)(const char *)) func;
+
+    const char *tmpfile = "tmpfile.txt";
+    array_list result_list = test_list({ 0,1,2,3,4,5 });
+    create_test_file(tmpfile, result_list);
+
+    tlist *list = read_sorted(tmpfile);
+    is_equal_test(list, result_list);
+
+    delete[] list;
+
+    list = test_list({ 5,3,4,1,2,0 });
+    create_test_file(tmpfile, list);
+    delete[] list;
+
+    list = read_sorted(tmpfile);
+    is_equal_test(list, result_list);
+
+    delete[] list;
+    delete[] result_list;
+
+    remove(tmpfile);
+    cerr << "OK" << endl;
+    return true;
+}
+
 bool test_full_lab19()
 {
     return  test_read_list() &&
-		test_insert_middle();
+        test_insert_middle(/*ваша реализация здесь*/) &&
+        test_remove_k_after_x(/*ваша реализация здесь*/) &&
+        test_insert_x_before_y(/*ваша реализация здесь*/) &&
+        test_read_sorted(/*ваша реализация здесь*/);
 }

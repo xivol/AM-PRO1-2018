@@ -31,5 +31,14 @@ bool test_read_list();
 
 bool test_insert_middle(void *func = nullptr);
 
+// void remove_k_after_x(const tlist *begin, tlist::datatype x, uint k);
+bool test_remove_k_after_x(void *func = nullptr);
+
+//void insert_x_before_y(tlist *&begin, tlist::datatype x, tlist::datatype y);
+bool test_insert_x_before_y(void *func = nullptr);
+
+// tlist *read_sorted(const char *filename);
+bool test_read_sorted(void *func = nullptr);
+
 // Тест всех функций tlist.h
 bool test_full_lab19();
