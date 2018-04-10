@@ -16,8 +16,7 @@ typedef tlist *array_list;
 
 // Функция получения массива-списка из массива значений.
 // Входные параметры:
-//     array - массив значений элементов списка;
-//     length - количество значений.
+//     list - список инициализации.
 // Возвращает массив элементов tlist.
 array_list test_list(const std::initializer_list<tlist::datatype> &list);
 
@@ -39,14 +38,22 @@ bool test_find();
 bool test_length(void *func = nullptr);
 
 // Тест для функции
-//tlist *add_first(const tlist *begin, tlist::datatype x);
+// tlist *add_first(tlist *&begin, tlist::datatype x);
 // Проверяет случаи пустого и не пустого списков.
 bool test_add_first(void *func = nullptr);
 
 // Тест для функции
-//tlist *add_last(const tlist *begin, tlist::datatype x);
+// tlist *add_last(tlist *&begin, tlist::datatype x);
 // Проверяет случаи пустого и не пустого списков.
 bool test_add_last(void *func = nullptr);
+
+// Тест для функции
+// Проверяет случаи пустого и не пустого списков.
+bool test_insert_before(void *func = nullptr);
+
+// Тест для функции
+// Проверяет случаи пустого и не пустого списков.
+bool test_remove_after(void *func = nullptr);
 
 // Тест всех функций tlist.h
 bool test_full_lab18();
