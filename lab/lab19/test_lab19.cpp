@@ -161,7 +161,7 @@ bool test_remove_k_after_x(void *func)
         cerr << "NOT IMPLEMENTED" << endl;
         return true;
     }
-    void (*remove_k_after_x)(const tlist *, tlist::datatype, uint) = (void (*)(const tlist *, tlist::datatype, uint )) func;
+    void (*remove_k_after_x)(tlist *, tlist::datatype, uint) = (void (*)(tlist *, tlist::datatype, uint )) func;
     
     array_list list = test_list({ 1,2,3,4,5,6,7,8,9 });
     tlist::datatype x = 0;
@@ -180,7 +180,7 @@ bool test_remove_k_after_x(void *func)
     
     list = test_list({ 1,1,2,1,1 });
     x = 1;
-    for (int i = 1; i < 5; ++i)
+    for (int i = 0; i < 5; ++i)
         if(list[i].data == x)
             list[i].next = new tlist{ 0, list[i].next };
     result_list = test_list({ 1,1,2,1,1 });
@@ -194,7 +194,7 @@ bool test_remove_k_after_x(void *func)
     list = test_list({ 1,1,2,1,1 });
     k = 2;
     x = 1;
-    for (int i = 1; i < 5; ++i)
+    for (int i = 0; i < 5; ++i)
         if (list[i].data == x) {
             list[i].next = new tlist{ 0, list[i].next };
             list[i].next = new tlist{ 0, list[i].next };
