@@ -50,9 +50,5 @@ bool test_insert_before(void *func = nullptr);
 // Проверяет случаи пустого и не пустого списков.
 bool test_remove_after(void *func = nullptr);
 
-// Тест для функции
-// Проверяет случаи пустого и не пустого списков.
-bool test_remove_k_after_x(void *func = nullptr);
-
 // Тест всех функций tlist.h
 bool test_full_lab20();
