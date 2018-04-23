@@ -42,14 +42,14 @@ void print(const tlist *begin);
 //     begin - указатель на начало списка;
 //     x - новое значение.
 // Возвращает указатель на новый элемент.
-tlist *insert_middle(const tlist *begin, tlist::datatype x);
+tlist *insert_middle(tlist *&begin, tlist::datatype x);
 
 // Удалить K элементов после элемента со значением X.
 // Входные параметры:
 //     begin - указатель на начало списка;
 //     x - искомое значение;
 //     k – количество значений для удаления.
-void remove_k_after_x(const tlist *begin, tlist::datatype x, uint k);
+void remove_k_after_x(tlist *begin, tlist::datatype x, uint k);
 
 // Вставить значение X перед каждым элементом со значением Y.
 // Входные параметры:
