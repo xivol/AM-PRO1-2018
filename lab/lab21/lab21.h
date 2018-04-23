@@ -1,4 +1,4 @@
-﻿//
+//
 // Лабораторная работа №21. Двусвязный список
 // lab21.h
 //
@@ -95,8 +95,6 @@ llist *find_last(const llist *begin, const llist *end, llist::datatype x);
 // Возвращает указатель на новое начало списка.
 llist *add_first(llist *&begin, llist *&end, llist::datatype x);
 
-
-
 // Вставка нового значения перед указанным элементом списка.
 // Входные параметры:
 //     begin - указатель на начало списка;
@@ -105,13 +103,13 @@ llist *add_first(llist *&begin, llist *&end, llist::datatype x);
 // Возвращает указатель на новый элемент списка.
 llist *insert_before(llist *&begin, llist *&end, llist *item, llist::datatype x);
 
-// Вставка нового значения после указанного элемента списка.
+// Удаление последнего элемента списка.
 // Входные параметры:
-//     begin - указатель на начало списка;
-//     item - указатель на элемент для вставки;
-//     x - новое значение.
-// Возвращает указатель на новый элемент списка.
-llist *insert_after(llist *&begin, llist *&end, llist *item, llist::datatype x);
+void remove_first(llist *&begin, llist *&end);
+
+// Удаление первого элемента списка.
+// Входные параметры:
+void remove_last(llist *&begin, llist *&end);
 
 // Удаление элемента после указанного элемента списка.
 // Входные параметры:
