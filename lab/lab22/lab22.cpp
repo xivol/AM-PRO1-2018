@@ -1,12 +1,12 @@
 ﻿//
-// Лабораторная работа №21. Двусвязный список
-// lab21.cpp
+// Лабораторная работа №22. Двусвязные списки. Обработка списков.
+// lab22.cpp
 //
 #include <cassert>
 #include <iostream>
 #include <fstream>
 #include "crtdynmem.h"
-#include "lab21.h"
+#include "lab22.h"
 
 using namespace std;
 
@@ -37,4 +37,20 @@ llist *read_list(const char *filename, llist *&end)
     }
 
     return begin;
+}
+
+bool is_symmetrical(const llist *begin, const llist *end)
+{
+	assert(begin != nullptr);
+	assert(end != nullptr);
+
+	while (begin != end) {
+		if (begin->data != end->data)
+			return false;
+		if (begin->next == end)
+			break;
+		begin = begin->next;
+		end = end->prev;
+	}
+	return true;
 }

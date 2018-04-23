@@ -1,5 +1,5 @@
-//
-// Лабораторная работа №19. Списки. Обработка списков
+п»ї//
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–19. РЎРїРёСЃРєРё. РћР±СЂР°Р±РѕС‚РєР° СЃРїРёСЃРєРѕРІ
 // lab19.cpp
 //
 #include <cassert>
@@ -18,7 +18,7 @@ tlist *read_list(const char *filename)
 
 	ifstream fin(filename);
 	if (!fin.is_open())
-		throw "Невозможно открыть файл";
+		throw "РќРµРІРѕР·РјРѕР¶РЅРѕ РѕС‚РєСЂС‹С‚СЊ С„Р°Р№Р»";
 
 	tlist::datatype data;
 	while (fin >> data) 

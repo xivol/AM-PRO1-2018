@@ -1,4 +1,4 @@
-//
+﻿//
 // Лабораторная работа №21. Двусвязный список
 // main.cpp
 //
@@ -20,23 +20,24 @@ int main()
     _CrtMemCheckpoint(&_ms);
     
     tlist *list1 = read_list("list.txt");
-    
-    llist *list2_end = nullptr;
-    llist *list2 = read_list("list.txt", list2_end);
-    
+
     print_list(list1);
     tlist::datatype x;
     cout<<"Ввведите искомое значение: ";
     cin >> x;
     cout << "В списке есть элемент со значением "<<x<<": " <<boolalpha << (find(list1, x) != nullptr) << endl;
-    
+
+	delete_list(list1);
+
+    llist *list2_end = nullptr;
+    llist *list2 = read_list("list.txt", list2_end);
+
     print_list(list2);
     cout<<"Ввведите искомое значение: ";
     llist::datatype y;
     cin >> y;
     cout << "В списке есть элемент со значением "<<y<<": " <<boolalpha << (find(list2, y) != nullptr) << endl;
 
-    delete_list(list1);
     delete_list(list2);
 
     _CrtMemDumpAllObjectsSince(&_ms);

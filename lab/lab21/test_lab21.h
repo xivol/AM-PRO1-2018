@@ -1,4 +1,4 @@
-//
+﻿//
 // Лабораторная работа №21. Двусвязный список
 // test_lab21.h
 //
@@ -19,7 +19,7 @@ typedef llist *array_llist;
 // Входные параметры:
 //     list - список инициализации.
 // Возвращает массив элементов tlist.
-array_llist test_list(const std::initializer_list<llist::datatype> &list);
+array_llist test_list(const std::initializer_list<llist::datatype> &list, llist *&end);
 
 // Тест на равенство двух списков
 // Входные параметры:
@@ -41,7 +41,12 @@ bool is_equal_test(const List *begin1, const List *begin2)
 }
 
 // Тест для функции
-// llist *find(const llist *begin, const tlist::datatype x)
+//
+// Проверка корректности чтения из файла.
+bool test_read_list();
+
+// Тест для функции
+// List *find(const List *begin, const tlist::datatype x)
 // Проверяет случаи наличия и отсутствия элементов в списке.
 bool test_find();
 
@@ -56,24 +61,18 @@ bool test_length_llist(void *func = nullptr);
 bool test_find_last(void *func = nullptr);
 
 // Тест для функции
-// tlist *add_first(tlist *&begin, tlist::datatype x);
+// llist *add_first(llist *&begin, llist *&end, llist::datatype x);
 // Проверяет случаи пустого и не пустого списков.
 bool test_add_first(void *func = nullptr);
 
 // Тест для функции
+// 
 // Проверяет случаи пустого и не пустого списков.
 bool test_insert_before(void *func = nullptr);
 
 // Тест для функции
-// Проверяет случаи пустого и не пустого списков.
-bool test_remove_last(void *func = nullptr);
-
-// Тест для функции
-// Проверяет случаи пустого и не пустого списков.
-bool test_remove_first(void *func = nullptr);
-
-// Тест для функции
-// Проверяет случаи пустого и не пустого списков.
+// 
+// Проверяет удаления из начала, конца и середины списка.
 bool test_remove(void *func = nullptr);
 
 // Тест всех функций tlist.h
