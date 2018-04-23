@@ -9,29 +9,30 @@
 
 using namespace std;
 
-llist *read_list(uint length, llist *&end)
+llist *read_list(const char *filename, llist *&end)
 {
+    assert(filename != nullptr);
     llist *begin = nullptr;
     end = nullptr;
 
-    while (length > 0) 
+    ifstream fin(filename);
+    if (!fin.is_open())
+        throw "Невозможно открыть файл";
+    
+    llist::datatype data;
+    while (fin >> data)
     {
-        llist::datatype data;
-        if (cin >> data)   // если чтение без ошибок
-        {
-            llist *node = new llist;
-            node->data = data;
-            node->next = nullptr;
-            node->prev = end;
+        llist *node = new llist;
+        node->data = data;
+        node->next = nullptr;
+        node->prev = end;
 
-            if (begin == nullptr)
-                begin = node;
+        if (begin == nullptr)
+            begin = node;
 
-            if (end != nullptr)
-                end->next = node;
-            end = node;
-        }
-        length--;
+        if (end != nullptr)
+            end->next = node;
+        end = node;
     }
 
     return begin;

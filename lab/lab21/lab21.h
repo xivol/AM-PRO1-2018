@@ -25,7 +25,7 @@ struct llist
 // Выходные праметры:
 //     end - указатель на конец списка.
 // Возвращает указатель на первый элемент нового списка.
-llist *read_list(uint length, llist *&end);
+llist *read_list(const char *filename, llist *&end);
 
 // Шаблонная функция удаления линейного списка.
 // Входные параметры:

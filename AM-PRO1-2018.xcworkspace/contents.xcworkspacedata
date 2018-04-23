@@ -159,6 +159,62 @@
       location = "group:lab"
       name = "lab">
       <Group
+         location = "container:"
+         name = "lab20">
+         <FileRef
+            location = "group:lab/lab20/crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab20/lab20.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab20/lab20.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab20/main.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab20/README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab20/test_lab20.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab20/test_lab20.h">
+         </FileRef>
+      </Group>
+      <Group
+         location = "container:"
+         name = "lab21">
+         <FileRef
+            location = "group:lab/lab21/lab19.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/lab19.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/lab21.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/lab21.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/main.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/test_lab21.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:lab/lab21/test_lab21.h">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:lab18"
          name = "lab18">
          <FileRef
