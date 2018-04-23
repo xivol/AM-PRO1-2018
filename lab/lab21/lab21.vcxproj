@@ -111,13 +111,10 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="crtdynmem.h" />
-    <ClInclude Include="lab18.h" />
     <ClInclude Include="lab21.h" />
     <ClInclude Include="test_lab21.h" />
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="lab18.cpp" />
-    <ClCompile Include="lab21.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="test_lab21.cpp" />
   </ItemGroup>

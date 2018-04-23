@@ -1,5 +1,5 @@
-//
-// Лабораторная работа №21. Двусвязный список
+п»ї//
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–21. Р”РІСѓСЃРІСЏР·РЅС‹Р№ СЃРїРёСЃРѕРє
 // test_lab21.cpp
 //
 #include <cassert>
@@ -57,18 +57,18 @@ bool test_length(void *func)
     }
     uint (*length)(const llist *) = (uint (*)(const llist *)) func;
 
-    // пустой список
+    // РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє
     array_llist list = nullptr;
     uint result = length(list);    
     assert(result == 0);
 
-    // список с одним элементом
+    // СЃРїРёСЃРѕРє СЃ РѕРґРЅРёРј СЌР»РµРјРµРЅС‚РѕРј
     list = new llist{ 1, nullptr };
     result = length(list);
     assert(result == 1);
     delete list;
 
-    // просто список
+    // РїСЂРѕСЃС‚Рѕ СЃРїРёСЃРѕРє
     list = test_list({ 1,2,3,4,5,6,7 });
     result = length(list);
     assert(result == 7);
@@ -87,7 +87,7 @@ bool test_add_first(void *func)
     }
     llist *(*add_first)(llist *&, llist *&, llist::datatype ) = (llist *(*)(llist *&, llist *&, llist::datatype )) func;
 
-    // пустой список
+    // РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє
     llist *list = nullptr;
     llist::datatype x = 0;
     array_llist result_list = test_list({ x });
@@ -104,7 +104,7 @@ bool test_add_first(void *func)
     delete result;
     delete[]result_list;
 
-    // список с одним элементом
+    // СЃРїРёСЃРѕРє СЃ РѕРґРЅРёРј СЌР»РµРјРµРЅС‚РѕРј
     list = new llist{ 1, nullptr };
     result_list = test_list({ x, 1 });    
     
@@ -119,7 +119,7 @@ bool test_add_first(void *func)
     delete result;
     delete[]result_list;
 
-    // просто список
+    // РїСЂРѕСЃС‚Рѕ СЃРїРёСЃРѕРє
     list = test_list({ 1,2,3,4,5,6,7 });
     result_list = test_list({ x, 1,2,3,4,5,6,7 });
 
@@ -147,7 +147,7 @@ bool test_add_last(void *func)
     }
     llist *(*add_last)(llist *&, llist *&, llist::datatype) = (llist *(*)(llist *&, llist *&, llist::datatype)) func;
 
-    // пустой список
+    // РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє
     llist *list = nullptr;
     llist::datatype x = 0;
     array_llist result_list = test_list({ x });
@@ -164,7 +164,7 @@ bool test_add_last(void *func)
     delete result;
     delete[]result_list;
 
-    // список с одним элементом
+    // СЃРїРёСЃРѕРє СЃ РѕРґРЅРёРј СЌР»РµРјРµРЅС‚РѕРј
     list = new llist{ 1, nullptr };
     result_list = test_list({ 1, x });
 
@@ -178,7 +178,7 @@ bool test_add_last(void *func)
     delete result;
     delete[]result_list;
 
-    // просто список
+    // РїСЂРѕСЃС‚Рѕ СЃРїРёСЃРѕРє
     list = test_list({ 1,2,3,4,5,6,7 });
     result_list = test_list({ 1,2,3,4,5,6,7, x });
 
@@ -205,7 +205,7 @@ bool test_insert_before(void *func)
 	}
 	llist *(*insert_before)(llist *&, llist *&, llist *, llist::datatype) = (llist *(*)(llist *&, llist *&, llist *, llist::datatype)) func;
 
-	// пустой список
+	// РїСѓСЃС‚РѕР№ СЃРїРёСЃРѕРє
 	llist *list = nullptr;
 	llist::datatype x = 0;
 	array_llist result_list = test_list({ x });
@@ -220,7 +220,7 @@ bool test_insert_before(void *func)
 	delete[]result_list;
 	delete result;
 
-	// просто список
+	// РїСЂРѕСЃС‚Рѕ СЃРїРёСЃРѕРє
 	list = test_list({ 1,2,3,4,5,6,7 });
 	result_list = test_list({ 1,2,3,x,4,5,6,7 });
 
@@ -280,10 +280,10 @@ bool test_full_lab18()
 {
 #ifdef _DEBUG
 	return  test_find() &&        
-		test_length(/*ваша реализация здесь*/) &&
-		test_add_first(/*ваша реализация здесь*/) &&
-		test_add_last(/*ваша реализация здесь*/) &&
-		test_insert_before(/*ваша реализация здесь*/) &&
-		test_remove_after(/*ваша реализация здесь*/);
+		test_length(/*РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ*/) &&
+		test_add_first(/*РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ*/) &&
+		test_add_last(/*РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ*/) &&
+		test_insert_before(/*РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ*/) &&
+		test_remove_after(/*РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ*/);
 #endif
 }

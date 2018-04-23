@@ -1,5 +1,5 @@
-//
-// Лабораторная работа №21. Двусвязный список
+п»ї//
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±РѕС‚Р° в„–21. Р”РІСѓСЃРІСЏР·РЅС‹Р№ СЃРїРёСЃРѕРє
 // main.cpp
 //
 #include <iostream>
@@ -28,12 +28,12 @@ int main()
     tlist::datatype x;
     cout<<"";
     cin >> x;
-    cout << "Количество нулевых элементов"<<x<<": " <<boolalpha << (find(list1, x) != nullptr) << endl;
+    cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ"<<x<<": " <<boolalpha << (find(list1, x) != nullptr) << endl;
     
     print_list(list2);
     cout<<"";
     cin >> x;
-    cout << "Количество нулевых элементов"<<x<<": " <<boolalpha << (find(list2, x) != nullptr) << endl;
+    cout << "РљРѕР»РёС‡РµСЃС‚РІРѕ РЅСѓР»РµРІС‹С… СЌР»РµРјРµРЅС‚РѕРІ"<<x<<": " <<boolalpha << (find(list2, x) != nullptr) << endl;
 
     delete_list(list1);
     delete_list(list2);
