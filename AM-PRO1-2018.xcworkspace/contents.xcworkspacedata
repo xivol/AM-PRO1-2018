@@ -159,6 +159,68 @@
       location = "group:lab"
       name = "lab">
       <Group
+         location = "group:lab18"
+         name = "lab18">
+         <FileRef
+            location = "group:lab18.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab18.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab18.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:lab18.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab18.h">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab18.cpp">
+         </FileRef>
+      </Group>
+      <Group
+         location = "group:lab19"
+         name = "lab19">
+         <FileRef
+            location = "group:lab19.h">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab19.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab19.vcxproj">
+         </FileRef>
+         <FileRef
+            location = "group:lab19.vcxproj.filters">
+         </FileRef>
+         <FileRef
+            location = "group:crtdynmem.h">
+         </FileRef>
+         <FileRef
+            location = "group:lab19.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:README.md">
+         </FileRef>
+         <FileRef
+            location = "group:test_lab19.cpp">
+         </FileRef>
+         <FileRef
+            location = "group:main.cpp">
+         </FileRef>
+      </Group>
+      <Group
          location = "group:lab16"
          name = "lab16">
          <FileRef
