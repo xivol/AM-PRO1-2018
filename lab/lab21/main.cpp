@@ -1,27 +1,41 @@
 //
-// Лабораторная работа №15. Двусвязный список
+// Лабораторная работа №21. Двусвязный список
 // main.cpp
 //
 #include <iostream>
-#include "llist.h"
-#include "test_llist.h"
+#include "crtdynmem.h"
+#include "lab18.h"
+#include "lab21.h"
+#include "test_lab21.h"
 
 using namespace std;
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    test_llist_full();
+    test_full_lab18();
 
-    char filename[32] = "llist.txt";
-    llist *end;
-    llist *begin = get_list(filename, end);
-    print_list(begin);
+    _CrtMemState _ms;
+    _CrtMemCheckpoint(&_ms);
+    
+    uint n;
+    cout << "Введите количество элементов списка" << endl;
+    cin >> n;
+    cout << "Введите элементы списка" << endl;
+    tlist *list = read_list(n);
 
-    cout << (is_symmetrical(begin, end) ? "Список симметричен" : "Список не симметричен") << endl;
-    delete_list(begin);
+    tlist *p = find(list, 0);
+    int cnt = 0;
+    while (p) {  // p != nullptr
+        cnt++;
+        p = find(p->next, 0);
+    }
 
-    _CrtDumpMemoryLeaks();
+    cout << "Количество нулевых элементов: " << cnt << endl;
+
+    delete_list(list);
+
+    _CrtMemDumpAllObjectsSince(&_ms);
 
     system("pause");
     return 0;
