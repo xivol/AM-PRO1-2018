@@ -4,7 +4,7 @@
 //
 #include <iostream>
 #include <iomanip>
-//#include "crtdynmem.h"
+#include "crtdynmem.h"
 #include "lab19.h"
 #include "lab21.h"
 #include "test_lab21.h"
