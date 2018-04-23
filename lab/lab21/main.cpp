@@ -3,8 +3,9 @@
 // main.cpp
 //
 #include <iostream>
+#include <iomanip>
 #include "crtdynmem.h"
-#include "lab18.h"
+#include "lab19.h"
 #include "lab21.h"
 #include "test_lab21.h"
 
@@ -18,22 +19,24 @@ int main()
     _CrtMemState _ms;
     _CrtMemCheckpoint(&_ms);
     
-    uint n;
-    cout << "Введите количество элементов списка" << endl;
-    cin >> n;
-    cout << "Введите элементы списка" << endl;
-    tlist *list = read_list(n);
+    tlist *list1 = read_list("list.txt");
+    
+    llist *list2_end = nullptr;
+    llist *list2 = read_list("list.txt", list2_end);
+    
+    print_list(list1);
+    tlist::datatype x;
+    cout<<"";
+    cin >> x;
+    cout << "Количество нулевых элементов"<<x<<": " <<boolalpha << (find(list1, x) != nullptr) << endl;
+    
+    print_list(list2);
+    cout<<"";
+    cin >> x;
+    cout << "Количество нулевых элементов"<<x<<": " <<boolalpha << (find(list2, x) != nullptr) << endl;
 
-    tlist *p = find(list, 0);
-    int cnt = 0;
-    while (p) {  // p != nullptr
-        cnt++;
-        p = find(p->next, 0);
-    }
-
-    cout << "Количество нулевых элементов: " << cnt << endl;
-
-    delete_list(list);
+    delete_list(list1);
+    delete_list(list2);
 
     _CrtMemDumpAllObjectsSince(&_ms);
 
