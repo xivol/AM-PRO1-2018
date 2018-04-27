@@ -116,8 +116,8 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="test_tree.cpp" />
-    <ClCompile Include="tree.cpp" />
+    <ClCompile Include="test_lab23.cpp" />
+    <ClCompile Include="lab23.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

@@ -4,6 +4,8 @@
 //
 #pragma once
 
+typedef unsigned int uint;
+
 // Описание узла дерева:
 //     tree::datatype - тип данных дерева;
 //     data - значение в узле дерева;
@@ -22,7 +24,7 @@ struct tree
 // Входные параметры:
 //     count - количество элементов дерева.
 // Возвращает указатель на корневой элемент дерева.
-tree *read_tree(const size_t count);
+tree *read_tree(const uint count);
 
 // Функция вставки значения в неупорядоченное дерево.
 // Входные параметры:
@@ -39,9 +41,34 @@ void delete_tree(tree *&root);
 // Функция вывода дерева на консоль.
 // Входные параметры:
 //     root - указатель на корневой элемент дерева.
-void print_tree(const tree *root, size_t space = 0);
+void print_tree(const tree *root, uint space = 0);
 
 // Функция вычисления количества листьев в дереве.
 // Входные параметры:
 //     root - указатель на корневой элемент дерева.
-size_t leaves_count(const tree *root);
+uint leaves_count(const tree *root);
+
+// Определить глубину дерева.
+// Входные параметры:
+//     root - указатель на корневой элемент дерева.
+uint depth(const tree *root);
+
+// Определить количество узлов на заданной глубине.
+// Входные параметры:
+//     root - указатель на корневой элемент дерева.
+uint width_at_depth(const tree *root, uint level);
+
+// Определить ширину дерева.
+// Входные параметры:
+//     root - указатель на корневой элемент дерева.
+uint width(const tree *root);
+
+// Создать копию дерева.
+// Входные параметры:
+//     root - указатель на корневой элемент дерева.
+tree *copy_tree(const tree *root);
+
+// Удалить все листья с заданным значением из дерева.
+// Входные параметры:
+//     root - указатель на корневой элемент дерева.
+void remove_leaves(tree *&root, tree::datatype x);

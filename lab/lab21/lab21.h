@@ -112,4 +112,4 @@ llist *insert_before(llist *&begin, llist *&end, llist *item, llist::datatype x)
 //     begin - указатель на начало списка;
 //     end - указатель на конец списка;
 //     item - указатель на элемент для удаления.
-void remove(llist *&begin, llist *&end, llist *item);
+void remove_item(llist *&begin, llist *&end, llist *item);

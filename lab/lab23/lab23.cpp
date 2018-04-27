@@ -7,7 +7,7 @@
 #include "crtdynmem.h"
 #include "lab23.h"
 
-tree *read_tree(size_t count)
+tree *read_tree(uint count)
 {
     tree *root = nullptr;
     tree::datatype x;
@@ -44,7 +44,7 @@ void delete_tree(tree *&root)
     root = nullptr;
 }
 
-void print_tree(const tree *root, size_t space)
+void print_tree(const tree *root, uint space)
 {
     if (root == nullptr) return;
     print_tree(root->left, space+1);
@@ -54,7 +54,7 @@ void print_tree(const tree *root, size_t space)
     print_tree(root->right, space+1);
 }
 
-size_t leaves_count(const tree *root)
+uint leaves_count(const tree *root)
 {
     if (root == nullptr) return 0;
     if (root->left == nullptr && root->right == nullptr) 

@@ -73,7 +73,7 @@ bool test_insert_before(void *func = nullptr);
 // Тест для функции
 // 
 // Проверяет удаления из начала, конца и середины списка.
-bool test_remove(void *func = nullptr);
+bool test_remove_item(void *func = nullptr);
 
 // Тест всех функций tlist.h
 bool test_full_lab21();

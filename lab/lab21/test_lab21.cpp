@@ -62,7 +62,7 @@ bool test_read_list()
 	// удаляем временные данные    
 	delete[] expected_list;
 	delete_list(list);
-	remove(tmpname);
+	remove_item(tmpname);
 
 	cerr << "OK" << endl;
 	return true;
@@ -144,7 +144,7 @@ bool test_find_last(void *func)
 
 	delete[] list;
 
-	cerr << "test find: OK" << endl;
+	cerr << "OK" << endl;
 	return true;
 }
 
@@ -177,6 +177,7 @@ bool test_add_first(void *func)
 
     // список с одним элементом
     list = new llist{ 1, nullptr, nullptr };
+    end = list;
     expected_list = test_list({ x, 1 }, ex_end);    
     
     result = add_first(list, end, x);
@@ -279,14 +280,14 @@ bool test_insert_before(void *func)
 	return true;
 }
 
-bool test_remove(void *func)
+bool test_remove_item(void *func)
 {
-	cerr << "test remove: ";
+	cerr << "test remove_item: ";
 	if (func == nullptr) {
 		cerr << "NOT IMPLEMENTED" << endl;
 		return true;
 	}
-	void(*remove)(llist *&, llist *&, llist *) = (void(*)(llist *&, llist *&, llist *)) func;
+	void(*remove_item)(llist *&, llist *&, llist *) = (void(*)(llist *&, llist *&, llist *)) func;
 
 	llist *end = nullptr;
 	array_llist list = test_list({ 1,2,3,4,5,6,7 }, end);
@@ -297,21 +298,21 @@ bool test_remove(void *func)
 	end->next = new llist{ 8, end, nullptr };
 	end = end->next;
 
-	remove(list, end, end);
+	remove_item(list, end, end);
 	is_equal_test(list, expected_list);
 
 	// в начале
 	list->prev = new llist{ 0, nullptr, list };
 	list = list->prev;
 
-	remove(list, end, list);
+	remove_item(list, end, list);
 	is_equal_test(list, expected_list);
 
 	// в середине
 	list[2].next = new llist{ -1, &list[2], &list[3] };
 	list[3].prev = list[2].next;
 
-	remove(list, end, list[2].next);
+	remove_item(list, end, list[2].next);
 	is_equal_test(list, expected_list);
 
 	delete[]list;
@@ -319,7 +320,7 @@ bool test_remove(void *func)
 
 	list = test_list({ 1 }, end);
 
-	remove(list, end, list);
+	remove_item(list, end, list);
 
 	assert(list == nullptr);
 	assert(end == nullptr);
@@ -336,6 +337,6 @@ bool test_full_lab21()
 		test_find_last(/*ваша реализация здесь*/) &&
 		test_add_first(/*ваша реализация здесь*/) &&
 		test_insert_before(/*ваша реализация здесь*/) &&
-        test_remove(/*ваша реализация здесь*/);
+        test_remove_item(/*ваша реализация здесь*/);
 #endif
 }

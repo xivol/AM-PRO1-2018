@@ -7,8 +7,20 @@
 
 typedef tree *array_tree;
 
-array_tree test_tree(const tree::datatype *array, const size_t length);
+array_tree test_tree(const std::initializer_list<tree::datatype> &list);
 
-bool test_get_array_tree();
+bool is_equal_tree(const tree *root1, const tree *root2);
 
-bool test_array_tree_rec(const tree::datatype *array, const size_t length, const size_t index, const tree *root);
+bool test_leaves_count();
+
+bool test_depth(void *func = nullptr);
+
+bool test_width_at_level(void *func = nullptr);
+
+bool test_width(void *func = nullptr);
+
+bool test_copy_tree(void *func = nullptr);
+
+bool test_remove_leaves(void *func = nullptr);
+
+bool test_full_lab23();

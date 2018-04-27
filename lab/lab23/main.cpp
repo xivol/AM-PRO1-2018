@@ -12,12 +12,13 @@ using namespace std;
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    test_get_array_tree();
+    test_full_lab23();
+    
 	cout << "Введите 10 значений: " << endl;
-    tree *root = read_tree(10);
+    tree *root = test_tree({ 1,2,3,4,5,6,7 }); 
     print_tree(root);
     cout << "Количество листьев: " << leaves_count(root) << endl;
-    delete_tree(root);
+    //delete_tree(root);
 
     _CrtDumpMemoryLeaks();
 
