@@ -1,5 +1,5 @@
 //
-// Лабораторная раббота №7. Массивы, обработка массивов.
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±Р±РѕС‚Р° в„–7. РњР°СЃСЃРёРІС‹, РѕР±СЂР°Р±РѕС‚РєР° РјР°СЃСЃРёРІРѕРІ.
 // lab7.cpp
 //
 #include <assert.h>
@@ -10,12 +10,12 @@ using namespace std;
 
 void read(int a[], int &n)
 {
-    cout<<"Введите N<"<<max_N<<endl;
+    cout<<"Р’РІРµРґРёС‚Рµ N<"<<max_N<<endl;
     do {
         cin >> n;
     } while (n < 1 || n >= max_N);
 
-    cout << "Введите " << n << " элемнтов" << endl;
+    cout << "Р’РІРµРґРёС‚Рµ " << n << " СЌР»РµРјРЅС‚РѕРІ" << endl;
     for (int i = 0; i < n; i++)
         cin >> a[i];
 }
@@ -32,12 +32,12 @@ int first_zero(const int a[], int n)
 {
     assert(n>0 && n<max_N);
 
-    // поиск ноля
+    // РїРѕРёСЃРє РЅРѕР»СЏ
     int i = 0;
-    while (a[i] != 0 && i<n)
+    while (i<n && a[i] != 0)
         i++;
 
-    if (i == n)  // нет ноля
+    if (i == n)  // РЅРµС‚ РЅРѕР»СЏ
         return -1;
     return i;
 }
@@ -47,11 +47,11 @@ int product_positive_after_zero(const int a[], int n)
     assert(n>0 && n<max_N);
 
     int i = first_zero(a, n);
-    if ( i==-1 )  // нет ноля
+    if ( i==-1 )  // РЅРµС‚ РЅРѕР»СЏ
         return 0;
 
     int prod = 1;
-    bool pos = false;  // флаг - наличие положительного элемента
+    bool pos = false;  // С„Р»Р°Рі - РЅР°Р»РёС‡РёРµ РїРѕР»РѕР¶РёС‚РµР»СЊРЅРѕРіРѕ СЌР»РµРјРµРЅС‚Р°
 
     while ( i<n ) {
         if( a[i]>0 ) {
