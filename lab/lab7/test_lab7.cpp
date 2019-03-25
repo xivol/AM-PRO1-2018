@@ -1,5 +1,5 @@
 //
-// Лабораторная раббота №7. Массивы, обработка массивов.
+// Р›Р°Р±РѕСЂР°С‚РѕСЂРЅР°СЏ СЂР°Р±Р±РѕС‚Р° в„–7. РњР°СЃСЃРёРІС‹, РѕР±СЂР°Р±РѕС‚РєР° РјР°СЃСЃРёРІРѕРІ.
 // test_lab7.cpp
 //
 #include <cassert>
@@ -23,7 +23,7 @@ bool test_first_zero(int_array_func f)
     assert(f(a, n) == 1);
 
     a[1] = 5;
-    // нет ноля
+    // РЅРµС‚ РЅРѕР»СЏ
     assert(f(a, n) == -1);
 
     cerr << "OK" << endl;
@@ -46,18 +46,18 @@ bool test_product_positive_after_zero(int_array_func f)
 
     a[0] = 0; a[1] = 1;
     // { 0, 1, 7, -1, 2, -3, 5}
-    // проверка c первым нолем
+    // РїСЂРѕРІРµСЂРєР° c РїРµСЂРІС‹Рј РЅРѕР»РµРј
     assert(f(a, n) == result);
 
     a[0] = 5;
     a[6] = 0;
     // { 5, 1, 7, -1, 2, -3, 0}
-    // последний ноль    
+    // РїРѕСЃР»РµРґРЅРёР№ РЅРѕР»СЊ    
     assert(f(a, n) == 0);
 
     a[6] = -1;
     // { 5, 1, 7, -1, 2, -3, -1}
-    // нет ноля
+    // РЅРµС‚ РЅРѕР»СЏ
     assert(f(a, n) == 0);
 
     cerr << "OK" << endl;
@@ -83,7 +83,8 @@ bool test_divide_sums_around_min(void *func)
     a[0] = 3;
     // { 3, 0, 7, 1, 2, 3, 5 };
     result = 3.0 / 18.0;
-    assert(abs(divide_sums_around_min(a, n) - result) < precision);
+	double tmp = divide_sums_around_min(a, n);
+    assert(abs(tmp - result) < precision);
 
     a[4] = -3;
     // { 3, 0, 7, 1, -3, 3, 5 };
@@ -92,8 +93,11 @@ bool test_divide_sums_around_min(void *func)
 
     a[6] = -5;
     // { 3, 0, 7, 1, -3, 3, -5 };
-    assert(isnan(divide_sums_around_min(a, n)));
-
+	
+	tmp = divide_sums_around_min(a, n);
+	if (!isnan(tmp)) { cout << "divide_sums_around_min РїСЂРё РґРµР»РµРЅРёРё РЅР° 0 РґРѕР»Р¶РЅР° РІРѕР·РІСЂР°С‰Р°С‚СЊ NaN - СЃРјРѕС‚СЂРёС‚Рµ С„РѕСЂРјСѓР»РёСЂРѕРІРєСѓ Р·Р°РґР°РЅРёСЏ!\n"; }
+	assert(isnan(tmp));
+    
     cerr << "OK" << endl;
     return true;
 }
@@ -150,7 +154,7 @@ bool test_insert_duplicates(void *func)
     }
     void(*insert_duplicates)(int [], int&) = (void(*)(int [], int&)) func;
 
-    int a[] = { 1, 0, 7, -1, 2, -3, 5 };
+    int a[max_N] = { 1, 0, 7, -1, 2, -3, 5 };
     int n = 7;
     int result[max_N] = { 1, 1, 0, 0, 7, 7, -1, -1, 2, 2, -3, -3, 5, 5 };
     int result_n = 14;
@@ -199,12 +203,10 @@ bool test_is_symmetrical(void *func)
 
 bool test_full_lab7()
 {
-#ifdef _DEBUG
     return test_first_zero(first_zero) &&
         test_product_positive_after_zero(product_positive_after_zero) &&
-        test_divide_sums_around_min(/* ваша реализация здесь */) &&
-        test_remove_duplicates(/* ваша реализация здесь */) &&
-        test_insert_duplicates(/* ваша реализация здесь */) && 
-        test_is_symmetrical(/* ваша реализация здесь */);
-#endif
+        test_divide_sums_around_min(/* РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ */) &&
+        test_remove_duplicates(/* РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ */) &&
+        test_insert_duplicates(/* РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ */) && 
+        test_is_symmetrical(/* РІР°С€Р° СЂРµР°Р»РёР·Р°С†РёСЏ Р·РґРµСЃСЊ */);
 }
